@@ -3,6 +3,9 @@
 import HeroSection from "@/components/HeroSection";
 import AboutUs from "@/components/AboutUs";
 import useLenis from "./hooks/useLenis";
+import Glimpses from "@/components/Glimpses";
+import { Testimonials } from "@/components/Testinomials";
+import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
   useLenis();
@@ -10,7 +13,9 @@ export default function Home() {
     <main className="w-full">
       <HeroSection />
       <AboutUs />
-      {/* You can add more sections below, they will scroll naturally */}
+      <Glimpses/>
+      <Testimonials/>
+      <Sponsors/>
     </main>
   );
 }
