@@ -23,25 +23,25 @@ const Navbar = () => {
     { name: "CONTACT", path: "/contact" },
   ];
 
-  // Handle scroll
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const currentScrollY = window.scrollY;
+  //Handle scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-//       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-//         // scrolling down
-//         setShowNavbar(false);
-//       } else {
-//         // scrolling up
-//         setShowNavbar(true);
-//       }
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // scrolling down
+        setShowNavbar(false);
+      } else {
+        // scrolling up
+        setShowNavbar(true);
+      }
 
-//       setLastScrollY(currentScrollY);
-//     };
+      setLastScrollY(currentScrollY);
+    };
 
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, [lastScrollY]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <motion.nav
@@ -53,7 +53,7 @@ const Navbar = () => {
       <div className="max-w-[100vw] px-6 lg:px-16 py-4 flex justify-between items-center">
         {/* Logo */}
         <motion.h1 whileHover={{ scale: 1.05 }}>
-          <div className="flex items-center h-20 w-20 md:h-24 md:w-24">
+          <div className="items-center h-20 w-20 hidden md:flex md:h-24 md:w-24">
             <img src="/logo.webp" alt="logo" />
           </div>
         </motion.h1>
