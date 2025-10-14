@@ -8,7 +8,6 @@ import { Testimonials } from "@/components/Testinomials";
 import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
-  useLenis();
   return (
     <main className="w-full">
       <HeroSection />
