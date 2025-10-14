@@ -5,7 +5,7 @@ const events = () => {
   return (
     <main className="w-full mt-35 flex flex-col items-center">
       
-      <h1 className="text-4xl md:text-7xl font-bold text-center mb-10 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
+      <h1 className="text-5xl md:text-7xl font-bold text-center mb-15 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
         Our Events
       </h1>
 
