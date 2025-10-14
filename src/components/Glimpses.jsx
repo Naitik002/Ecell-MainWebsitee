@@ -67,7 +67,7 @@ export default function MovieCarousel() {
   return (
     <div className="relative w-full py-16">
       {/* Heading */}
-      <h2 className="text-4xl md:text-6xl font-bold text-center text-[#FAC176] mb-12">
+      <h2 className="text-4xl md:text-6xl font-bold text-center bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent mb-12">
         Glimpses of Last Year
       </h2>
 
@@ -121,7 +121,7 @@ export default function MovieCarousel() {
             <button
               key={index}
               className={`h-2 rounded-full transition-all duration-300 ${
-                index === selectedIndex ? "w-6 bg-yellow-500" : "w-2 bg-white/30 hover:bg-white/50"
+                index === selectedIndex ? "w-6 bg-[#fac176]" : "w-2 bg-white/30 hover:bg-white/50"
               }`}
               onClick={() => scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}

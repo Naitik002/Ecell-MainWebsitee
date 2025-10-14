@@ -107,7 +107,7 @@ export default function AboutUs() {
                     <div ref={leftRef} className="flex items-start mb-8 md:mb-0">
                         {/* Vertical line */}
                         <div className="w-1 bg-[#FAC176] mr-4 h-16 md:h-full"></div>
-                        <h2 className="text-4xl md:text-6xl font-extrabold leading-tight text-[#FAC176]">
+                        <h2 className="text-4xl md:text-6xl font-extrabold leading-tight bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
                             What is E-Cell?
                         </h2>
                     </div>
@@ -123,7 +123,7 @@ export default function AboutUs() {
                             key={index}
                             className="p-6 rounded-xl shadow-lg w-full md:w-[80%]"
                         >
-                            <h3 className="text-lg md:text-3xl font-bold mb-2 text-[#FAC176]">{card.heading}</h3>
+                            <h3 className="text-lg md:text-3xl font-bold mb-2 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">{card.heading}</h3>
                             <p className="text-white text-md md:text-xl">{card.text}</p>
                         </div>
                     ))}

@@ -41,7 +41,7 @@ export function Testimonials() {
   return (
     <section className="bg-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center mb-8">
-        <h2 className="text-5xl md:text-7xl font-extrabold text-[#FAC176] sm:text-4xl">
+        <h2 className="text-5xl md:text-7xl font-extrabold bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent sm:text-4xl">
           Testimonials
         </h2>
       </div>

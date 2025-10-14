@@ -6,7 +6,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section
-      className="relative w-full h-screen overflow-x-hidden"
+      className="relative w-full h-screen overflow-x-hidden mt-25"
       style={{
         background: `
           radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,1) 80%),
@@ -29,7 +29,7 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="/PHOTO-2025-10-09-20-40-32.jpg"
+            src="/PHOTO-2025-10-09-20-43-44.jpg"
             alt="E-Cell MANIT Coin"
             className="w-64 sm:w-56 md:w-full max-w-full h-auto object-contain opacity-95 mix-blend-lighten"
           />
