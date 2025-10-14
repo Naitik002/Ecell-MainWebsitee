@@ -6,7 +6,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section
-      className="relative w-full h-screen overflow-x-hidden mt-25"
+      className="relative w-full h-screen overflow-x-hidden mt-5 md:mt-25"
       style={{
         background: `
           radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,1) 80%),

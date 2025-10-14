@@ -51,12 +51,16 @@ const Navbar = () => {
       }}
     >
       <div className="max-w-[100vw] px-6 lg:px-16 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <motion.h1 whileHover={{ scale: 1.05 }}>
-          <div className="items-center h-20 w-20 hidden md:flex md:h-24 md:w-24">
+        {/* Logo (hidden visually on home page, but space kept) */}
+        <motion.h1 whileHover={{ scale: pathname !== "/" ? 1.05 : 1 }}>
+          <div
+            className={`items-center h-20 w-20 md:flex md:h-24 md:w-24 ${pathname === "/" ? "invisible md:visible" : ""
+              }`}
+          >
             <img src="/logo.webp" alt="logo" />
           </div>
         </motion.h1>
+
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-8 text-lg font-semibold">
@@ -64,11 +68,10 @@ const Navbar = () => {
             <li key={item.name}>
               <Link
                 href={item.path}
-                className={`transition-all duration-300 hover:text-[#FAC176] relative ${
-                  pathname === item.path
+                className={`transition-all duration-300 hover:text-[#FAC176] relative ${pathname === item.path
                     ? "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-[#FAC176] text-[#FAC176]"
                     : "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#FAC176] hover:after:w-full after:transition-all after:duration-300"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -112,11 +115,10 @@ const Navbar = () => {
                 <Link
                   href={item.path}
                   onClick={() => setMenuOpen(false)}
-                  className={`block relative transition-all duration-300 hover:text-[#FAC176] ${
-                    pathname === item.path
+                  className={`block relative transition-all duration-300 hover:text-[#FAC176] ${pathname === item.path
                       ? "after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-full after:h-[2px] after:bg-[#FAC176]"
                       : "after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-0 after:h-[2px] after:bg-[#FAC176] hover:after:w-full after:transition-all after:duration-300"
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
