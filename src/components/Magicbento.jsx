@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
+import LightRays from './LightRays';
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -171,6 +172,8 @@ const ParticleCard = ({
             timeoutsRef.current.push(timeoutId);
         });
     }, [initializeParticles]);
+
+
 
     useEffect(() => {
         if (disableAnimations || !cardRef.current) return;
@@ -495,6 +498,28 @@ const MagicBento = ({
     const isMobile = useMobileDetection();
     const shouldDisableAnimations = disableAnimations || isMobile;
 
+    const [selectedCard, setSelectedCard] = useState(null);
+
+    // 🆕 Close overlay
+    const closeOverlay = () => setSelectedCard(null);
+
+    
+
+    useEffect(() => {
+        if (isMobile) {
+            if (selectedCard) {
+                document.body.style.overflow = 'hidden'; // lock scroll
+            } else {
+                document.body.style.overflow = ''; // restore scroll
+            }
+        }
+
+        // Cleanup when component unmounts
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [selectedCard, isMobile]);
+
     return (
         <>
             <style>
@@ -611,7 +636,7 @@ const MagicBento = ({
           @media (max-width: 768px) {
           .card-responsive .card:nth-child(1),
   .card-responsive .card:nth-child(4) {
-    height: 50px; /* or any height you want */
+    height: 50px; 
                 }}
 
         `}
@@ -629,11 +654,11 @@ const MagicBento = ({
 
             <BentoCardGrid gridRef={gridRef}>
                 <div
-                    className="grid gap-4 md:gap-8 w-full 
-                    grid-cols- 
-                    md:grid-cols-2
-                    [grid-template-areas:'startup_startup''bplan_casestudy''pecharcha_pecharcha''event6_iplauction']
-                    max-w-6xl mx-auto "
+                    className={`grid gap-4 md:gap-8 w-full 
+  md:grid-cols-2 
+  [grid-template-areas:'startup_startup''bplan_casestudy''pecharcha_pecharcha''event6_iplauction'] 
+  max-w-6xl mx-auto mb-20`}
+
                 >
 
                     {cardData.map((card, index) => {
@@ -642,7 +667,7 @@ const MagicBento = ({
 
                         const cardStyle = {
                             backgroundColor: card.color || 'var(--background-dark)',
-                            
+
                             borderColor: 'var(--border-color)',
                             color: 'var(--white)',
                             '--glow-x': '50%',
@@ -675,7 +700,7 @@ const MagicBento = ({
                                     clickEffect={clickEffect}
                                     enableMagnetism={enableMagnetism}
                                 >
-                                     <div
+                                    <div
                                         className="absolute inset-0 bg-contain bg-center transition-transform duration-700 ease-out scale-100 group-hover:scale-110 group-hover:opacity-50"
                                         style={{ backgroundImage: `url(${card.image})` }}
                                     />
@@ -684,12 +709,14 @@ const MagicBento = ({
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
 
                                     {/* Text Layer */}
-                                    <div className="relative z-10 flex flex-col justify-between h-full p-1 md:p-5">
+                                    <div
+                                        onClick={() => { if (isMobile) setSelectedCard(card) }}
+                                        className="relative z-10 flex flex-col justify-between h-full p-1 md:p-5">
                                         {/* Title always visible */}
                                         <h3 className="text-xl md:text-4xl font-semibold">{card.title}</h3>
 
                                         {/* Description hidden initially */}
-                                        <p className="mt-0 md:mt-2 text-[0.5rem] md:text-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
+                                        <p className="mt-0 md:mt-2 hidden md:block md:text-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
                                             {card.description}
                                         </p>
                                     </div>
@@ -812,7 +839,7 @@ const MagicBento = ({
                                     el.addEventListener('click', handleClick);
                                 }}
                             >
-                                
+
 
                                 {/* Dark Overlay */}
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
@@ -832,6 +859,88 @@ const MagicBento = ({
                     })}
                 </div>
             </BentoCardGrid>
+            {isMobile && selectedCard && (
+                <div
+                    className="fixed inset-0 w-screen h-screen bg-black/70 backdrop-blur-md z-[999] animate-fadeIn overflow-hidden"
+                    onClick={closeOverlay}
+                >
+                    <LightRays
+                        raysOrigin="top-center"
+                        raysColor="#fac176"
+                        raysSpeed={0.5}
+                        lightSpread={3}
+                        rayLength={5}
+                        followMouse={true}
+                        mouseInfluence={0.1}
+                        noiseAmount={0.1}
+                        distortion={0.05}
+                        className="custom-rays"
+                    />
+                    <div
+                        className="absolute top-0 left-0 w-full h-full bg-[#00000] text-white rounded-none p-6 md:p-10 shadow-2xl animate-slideIn"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={closeOverlay}
+                            className="absolute top-4 right-4 text-[#fac176] text-3xl hover:text-gray-400 "
+                        >
+                            ×
+                        </button>
+
+                        <div className="flex flex-col justify-center items-start w-full h-full overflow-y-auto">
+                            <img
+                                src={selectedCard.image}
+                                alt={selectedCard.title}
+                                className="w-full h-64 object-contain mb-6 rounded-lg"
+                            />
+                            <h2 className="text-4xl font-bold mb-4 mt-4">{selectedCard.title}</h2>
+                            <p className="text-lg leading-relaxed opacity-90">{selectedCard.description}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            <style jsx>{`
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            @keyframes slideIn {
+                from {
+                transform: translateX(100%);
+                opacity: 0.6;
+                }
+                to {
+                transform: translateX(0);
+                opacity: 1;
+                }
+            }
+
+            @keyframes slideOut {
+                from {
+                transform: translateX(0);
+                opacity: 1;
+                }
+                to {
+                transform: translateX(100%);
+                opacity: 0;
+                }
+            }
+
+            .animate-fadeIn {
+                animation: fadeIn 0.3s ease forwards;
+            }
+
+            .animate-slideIn {
+                animation: slideIn 0.4s ease-out forwards;
+            }
+
+            .animate-slideOut {
+                animation: slideOut 0.4s ease-out forwards;
+            }
+            `}</style>
+
         </>
     );
 };
