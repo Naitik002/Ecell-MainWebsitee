@@ -288,13 +288,7 @@ export default function SponsorUs() {
         </motion.form>
       </section>
 
-      {/* Footer */}
-      <footer className="py-6 text-center text-sm text-white border-t border-[#FAC176]/30">
-        <p>
-          © {new Date().getFullYear()} E-Cell MANIT | All Rights Reserved | Built
-          with <span className="text-[#FAC176]">💛</span> by Team E-Cell
-        </p>
-      </footer>
+      
     </main>
   );
 }
