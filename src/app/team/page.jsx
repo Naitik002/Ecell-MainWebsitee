@@ -346,7 +346,7 @@ const TeamPage = () => {
   }, [activeVertical, teamData, verticals]);
 
   return (
-    <div className="min-h-screen bg-black mt-20 text-gray-300 font-sans selection:bg-amber-500/30 overflow-x-hidden">
+    <div className="min-h-screen bg-black mt-20 text-gray-300 font-sans  overflow-x-hidden">
       <AnimatedGlowBackground />
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

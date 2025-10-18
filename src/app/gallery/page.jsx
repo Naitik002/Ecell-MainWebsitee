@@ -144,7 +144,7 @@ const GalleryPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-gray-300 font-sans mt-15 selection:bg-amber-500/30 overflow-x-hidden">
+        <div className="min-h-screen bg-black text-gray-300 font-sans mt-15 overflow-x-hidden">
             <AnimatedGlowBackground />
 
             <main className="relative z-10">

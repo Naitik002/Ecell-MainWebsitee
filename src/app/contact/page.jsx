@@ -718,7 +718,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black mt-5 text-gray-300 font-sans selection:bg-amber-500/30 overflow-x-hidden">
+    <div className="min-h-screen bg-black mt-5 text-gray-300 font-sans overflow-x-hidden">
       <AnimatedGlowBackground />
 
       <main className="relative z-10">
@@ -776,7 +776,7 @@ const Contact = () => {
               className="lg:col-span-3  backdrop-blur-md rounded-2xl p-8 border border-gray-800 lg:mr-12"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
-                <AnimatedFormField label="Your Name" name="name" required value={formData.name} 
+                <AnimatedFormField label="Your Name" name="name" required value={formData.name}
                 onChange={(e) => {
                   // Allow only letters and spaces
                   const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
