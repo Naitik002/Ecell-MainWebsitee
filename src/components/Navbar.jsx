@@ -73,6 +73,7 @@ const Navbar = () => {
             const isExternal = item.path.startsWith('http');
             return isExternal ? (
               <a
+                key={item.name}
                 href={item.path}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -551,6 +551,7 @@
 import React from 'react';
 // Using framer-motion for smooth, physics-based animations.
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaEnvelope } from 'react-icons/fa';
 
 // --- Reusable SVG Icons for a modern look ---
 // Using inline SVGs to avoid extra dependencies and ensure consistency.
@@ -642,8 +643,8 @@ const GildedCoordinatorCard = ({ name, role, email, phone, image, linkedin }) =>
               linkedin && { icon: <LinkedinIcon />, href: linkedin, text: "LinkedIn" }
             ].filter(Boolean).map((item, i) => (
               <a key={i} href={item.href} target="_blank" rel="noopener noreferrer"
-                 className="flex items-center justify-center space-x-2 text-gray-400 hover:text-amber-300 transition-all duration-300 my-2 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0"
-                 style={{ transitionDelay: `${100 + i * 100}ms` }}
+                className="flex items-center justify-center space-x-2 text-gray-400 hover:text-amber-300 transition-all duration-300 my-2 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0"
+                style={{ transitionDelay: `${100 + i * 100}ms` }}
               >
                 <span className="w-5 h-5">{item.icon}</span> <span>{item.text}</span>
               </a>
@@ -672,19 +673,38 @@ const staggerContainer = {
 const Contact = () => {
   const [formData, setFormData] = React.useState({ name: '', email: '', subject: '', message: '' });
   const [formStatus, setFormStatus] = React.useState({ submitted: false, message: '' });
+  const [loading, setLoading] = React.useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormStatus({ submitted: true, message: 'Thank you! Your message has been sent.' });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setTimeout(() => setFormStatus({ submitted: false, message: '' }), 5000);
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzu5aJyChvNegJ0W4dsonz5GyLej8Dmc5aRf8gPKu8JJN2UfMsRZdcR0vzyKFnTo94Wyw/exec";
+
+    setLoading(true);
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors", // prevents CORS issues
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      setFormStatus({ submitted: true, message: "Thank you! Your message has been sent." });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setFormStatus({ submitted: false, message: '' }), 5000);
+    } catch (error) {
+      console.error("Error!", error.message);
+      setFormStatus({ submitted: true, message: "Oops! Something went wrong." });
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   const studentCoordinators = [
     { name: "Aisha Sharma", role: "President", email: "aisha.s@ecell.com", phone: "+91 98765 43210", image: "https://placehold.co/200x200/000000/FBBF24?text=AS", linkedin: "https://linkedin.com/in/aishasharma" },
@@ -756,21 +776,57 @@ const Contact = () => {
               className="lg:col-span-3  backdrop-blur-md rounded-2xl p-8 border border-gray-800 lg:mr-12"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
-                <AnimatedFormField label="Your Name" name="name" required value={formData.name} onChange={handleInputChange} />
+                <AnimatedFormField label="Your Name" name="name" required value={formData.name} 
+                onChange={(e) => {
+                  // Allow only letters and spaces
+                  const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+                  setFormData({ ...formData, name: value });
+                }} />
                 <AnimatedFormField label="Your Email" name="email" type="email" required value={formData.email} onChange={handleInputChange} />
                 <AnimatedFormField label="Subject" name="subject" required value={formData.subject} onChange={handleInputChange} />
                 <AnimatedFormField label="Your Message..." name="message" as="textarea" required value={formData.message} onChange={handleInputChange} />
                 <motion.div variants={fadeInUp} className="text-center pt-2">
                   <button
                     type="submit"
-                    className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-amber-400 bg-black rounded-lg shadow-lg transition-all duration-300 hover:shadow-amber-400/30 border border-gray-700 w-full md:w-auto"
+                    disabled={loading}
+                    className={`group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-amber-400 bg-black rounded-lg shadow-lg transition-all duration-300 border border-gray-700 w-full md:w-auto
+    ${loading ? "cursor-not-allowed" : "hover:shadow-amber-400/30"}
+  `}
                   >
                     <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-amber-400 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                     <span className="relative flex items-center space-x-2 group-hover:text-black transition-colors duration-300">
-                      <span>Send Message</span>
-                      <SendIcon/>
+                      {loading ? (
+                        <>
+                          <svg
+                            className="animate-spin h-5 w-5 text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                            ></path>
+                          </svg>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <span>Send Message</span> <SendIcon />
+                        </>
+                      )}
                     </span>
                   </button>
+
                 </motion.div>
                 <AnimatePresence>
                   {formStatus.submitted && (
