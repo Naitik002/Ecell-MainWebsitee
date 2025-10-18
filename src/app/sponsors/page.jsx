@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { FaHandshake, FaUsers, FaQuoteLeft, FaEnvelope } from "react-icons/fa";
 
 const fadeUp = {
@@ -13,6 +14,47 @@ const fadeUp = {
 };
 
 export default function SponsorUs() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxXrlJYhFrgSryesebdeEwiQNsqXhMVJ1KeIWROyqGw4lThU1xzrjoW3JI_wFOPch8hew/exec";
+
+    setLoading(true);
+    setStatus("");
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors", // important for client-side form submission
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData), // send JSON to match Apps Script parsing
+      });
+
+      setStatus("✅ Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      setStatus("⚠️ Error sending message.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="bg-black text-white overflow-x-hidden">
       {/* Hero Section */}
@@ -259,36 +301,82 @@ export default function SponsorUs() {
           Contact Us
         </motion.h2>
         <motion.form
+          onSubmit={handleSubmit}
           className="max-w-xl mx-auto bg-black border border-[#FAC176]/40 p-8 rounded-xl flex flex-col gap-4"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
         >
           <input
             type="text"
+            name="name"
+            value={formData.name}
+            onChange={(e) => {
+              // Allow only letters and spaces
+              const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+              setFormData({ ...formData, name: value });
+            }}
             placeholder="Your Name"
+            required
             className="bg-black border border-[#FAC176]/40 p-3 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-[#FAC176]"
           />
           <input
             type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             placeholder="Your Email"
+            required
             className="bg-black border border-[#FAC176]/40 p-3 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-[#FAC176]"
           />
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Your Message"
             rows="4"
+            required
             className="bg-black border border-[#FAC176]/40 p-3 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-[#FAC176]"
           />
           <button
             type="submit"
-            className="bg-[#FAC176] text-black font-semibold py-3 rounded-lg hover:bg-[#eab465] transition-all flex justify-center items-center gap-2"
+            disabled={loading}
+            className={`${loading ? "bg-[#eab465] cursor-not-allowed" : "bg-[#FAC176] hover:bg-[#eab465]"
+              } text-black font-semibold py-3 rounded-lg transition-all flex justify-center items-center gap-2`}
           >
-            <FaEnvelope /> Send Message
+            {loading ? (
+              <>
+                <svg
+                  className="animate-spin h-5 w-5 text-black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  ></path>
+                </svg>
+                Sending...
+              </>
+            ) : (
+              <>
+                <FaEnvelope /> Send Message
+              </>
+            )}
           </button>
+
+          {status && <p className="text-center text-[#FAC176] mt-3">{status}</p>}
         </motion.form>
       </section>
 
-      
+
     </main>
   );
 }
