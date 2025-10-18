@@ -217,21 +217,16 @@
 
 
 
-
-
-
 "use client";
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { data1, data2 } from '@/components/TeamData'; // Kept your imports
+import { data1, data2 } from '@/components/TeamData';
 
-// --- Reusable SVG Icons (From your first file) ---
 const LinkedinIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-full h-full"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" fill="currentColor"/></svg>;
 const InstagramIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-full h-full"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.48.73-2.175 1.425C1.27 2.73 1.02 3.33.63 4.136c-.3.765-.5 1.63-.56 2.91C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.28.26 2.15.56 2.91.3.765.73 1.46 1.425 2.155.695.695 1.39 1.12 2.155 1.425.765.3 1.63.5 2.91.56 1.28.057 1.687.072 4.947.072s3.667-.015 4.947-.072c1.28-.06 2.15-.26 2.91-.56.765-.3 1.46-.73 2.155-1.425.695-.695 1.12-1.39 1.425-2.155.3-.765.5-1.63.56-2.91.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.28-.26-2.15-.56-2.91-.3-.765-.73-1.46-1.425-2.155C21.27 1.27 20.67 1.02 19.864.63c-.765-.3-1.63-.5-2.91-.56C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.012 4.85.07 1.17.055 1.805.248 2.227.415.562.217.96.477 1.382.896.42.42.68.82.896 1.382.167.422.36 1.057.413 2.227.058 1.265.07 1.646.07 4.85s-.012 3.585-.07 4.85c-.055 1.17-.248 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.42-.82.68-1.382.896-.422.167-1.057.36-2.227.413-1.265.058-1.646.07-4.85.07s-3.585-.012-4.85-.07c-1.17-.055-1.805-.248-2.227-.413-.562.217-.96-.477-1.382-.896-.42-.42-.68-.82-.896-1.382-.167-.422-.36-1.057-.413-2.227-.058-1.265-.07-1.646-.07-4.85s.012-3.585.07-4.85c.055-1.17.248 1.805.413-2.227.217-.562.477.96.896-1.382.42-.42.82.68 1.382-.896.422-.167 1.057.36 2.227.413C8.415 2.172 8.797 2.16 12 2.16zm0 2.91c-3.61 0-6.49 2.88-6.49 6.49s2.88 6.49 6.49 6.49 6.49-2.88 6.49-6.49S15.61 5.07 12 5.07zm0 10.81c-2.4 0-4.33-1.93-4.33-4.33s1.93-4.33 4.33-4.33 4.33 1.93 4.33 4.33-1.93 4.33-4.33 4.33zm6.405-11.835c-.75 0-1.36-.61-1.36-1.36s.61-1.36 1.36-1.36 1.36.61 1.36 1.36-.61 1.36-1.36 1.36z" fill="currentColor"/></svg>;
 const EmailIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-full h-full"><title>Email</title><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" fill="currentColor"/></svg>;
 
-// --- Animated Background ---
 const AnimatedGlowBackground = () => (
   <div className="absolute inset-0 -z-50 overflow-hidden bg-black">
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-amber-500/10 to-transparent rounded-full animate-pulse-slow blur-3xl"></div>
@@ -239,7 +234,6 @@ const AnimatedGlowBackground = () => (
   </div>
 );
 
-// --- Gilded Member Card (From your first file) ---
 const GildedMemberCard = ({ imgLink, personName, personVertical, linkedin, insta, mail }) => {
   return (
     <motion.div
@@ -299,31 +293,28 @@ const GildedMemberCard = ({ imgLink, personName, personVertical, linkedin, insta
   );
 };
 
-// --- Animation Variants ---
 const fadeInUp = {
   initial: { y: 60, opacity: 0 },
   animate: { y: 0, opacity: 1, transition: { duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] } }
 };
 
-// --- Main Team Page Component ---
 const TeamPage = () => {
   const [activeVertical, setActiveVertical] = useState('All');
 
-  // --- Data from your first file ---
   const facultyData = [
     {
       imgLink: "https://placehold.co/200x200/000000/FBBF24?text=RV",
-      personName: "Dr. Rohan Verma",
-      personVertical: "Faculty Advisor",
-      linkedin: "#",
+      personName: "Dr. Akhilesh Barve",
+      personVertical: "Chairman MRIC",
+      linkedin: "https://www.linkedin.com/in/akhilesh-barve-879477201/",
       insta: null,
       mail: null
     },
     {
       imgLink: "https://placehold.co/200x200/000000/FBBF24?text=PM",
-      personName: "Prof. Priya Mehra",
-      personVertical: "Assoc. Faculty Advisor",
-      linkedin: "#",
+      personName: "Dr. Deepak Kumar",
+      personVertical: "Coordinator",
+      linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",
       insta: null,
       mail: null
     },
@@ -331,30 +322,24 @@ const TeamPage = () => {
 
   const verticals = ['All', 'Web Developer', 'Content Writer', 'Event Manager', 'Sponsorship Executive', 'Video Editor', 'Designer'];
 
-  // --- NEW: Create the 'teamData' object structure from the template ---
-  // This combines all your data sources into the object structure your template uses
   const teamData = useMemo(() => {
-    // Group members from data2 by their vertical
     const groupedVerticals = {};
-    const verticalsList = verticals.slice(1); // Get all verticals except 'All'
+    const verticalsList = verticals.slice(1);
 
     verticalsList.forEach(vertical => {
       groupedVerticals[vertical] = data2.filter(member => member.personVertical === vertical);
     });
 
     return {
-      "Faculty Advisors": facultyData, // From your hardcoded data
-      "Core Team": data1,          // From your import
-      ...groupedVerticals            // Spread all grouped vertical arrays
+      "Faculty Advisors": facultyData,
+      "Core Team": data1,
+      ...groupedVerticals
     };
-  }, [data1, data2]); // Depends on the imported data
+  }, [data1, data2]);
 
-  // --- NEW: Filter logic from the template ---
-  // This logic now works with the new 'teamData' object
   const filteredMembers = useMemo(() => {
     if (activeVertical === 'All') {
-      // Get all arrays *except* Faculty and Core Team, and flatten them
-      const verticalsOnly = verticals.slice(1); // Get all vertical names
+      const verticalsOnly = verticals.slice(1);
       return verticalsOnly.flatMap(key => teamData[key] || []);
     }
     return teamData[activeVertical] || [];
@@ -379,7 +364,6 @@ const TeamPage = () => {
           </motion.p>
         </motion.section>
 
-        {/* --- NEW: Faculty and Core Team (Rendered using template's map logic) --- */}
         {["Faculty Advisors", "Core Team"].map(sectionTitle => (
           <section key={sectionTitle} className="mb-20">
             <motion.h2
@@ -393,15 +377,12 @@ const TeamPage = () => {
             </motion.h2>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {teamData[sectionTitle] && teamData[sectionTitle].map((member, index) => (
-                // We can use {...member} because your GildedMemberCard
-                // already accepts the prop names present in your data
                 <GildedMemberCard key={`${sectionTitle}-${index}`} {...member} />
               ))}
             </div>
           </section>
         ))}
 
-        {/* --- Vertical Teams (Filterable) --- */}
         <section>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -412,7 +393,6 @@ const TeamPage = () => {
             >
               Our Verticals
             </motion.h2>
-            {/* Filter Buttons (Uses your 'verticals' array) */}
             <div className="flex justify-center flex-wrap gap-4 mb-12">
               {verticals.map((vertical) => (
                 <button
@@ -438,11 +418,9 @@ const TeamPage = () => {
               ))}
             </div>
 
-            {/* Team Grid (Uses new 'filteredMembers' logic) */}
             <motion.div layout className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               <AnimatePresence>
                 {filteredMembers.map((member) => (
-                  // The key is updated to be more stable during filtering
                   <GildedMemberCard key={`${activeVertical}-${member.personName}`} {...member} />
                 ))}
               </AnimatePresence>
