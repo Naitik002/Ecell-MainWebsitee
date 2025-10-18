@@ -303,7 +303,7 @@ const TeamPage = () => {
 
   const facultyData = [
     {
-      imgLink: "https://placehold.co/200x200/000000/FBBF24?text=RV",
+      imgLink: "https://placehold.co/200x200/000000/FBBF24?text=AB",
       personName: "Dr. Akhilesh Barve",
       personVertical: "Chairman MRIC",
       linkedin: "https://www.linkedin.com/in/akhilesh-barve-879477201/",
@@ -311,7 +311,7 @@ const TeamPage = () => {
       mail: null
     },
     {
-      imgLink: "https://placehold.co/200x200/000000/FBBF24?text=PM",
+      imgLink: "https://placehold.co/200x200/000000/FBBF24?text=DK",
       personName: "Dr. Deepak Kumar",
       personVertical: "Coordinator",
       linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",

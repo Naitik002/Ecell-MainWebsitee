@@ -3,22 +3,19 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// --- Reusable SVG Icons ---
 const ExpandIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 14H5v5h5v-2H7v-3zM5 10h2V7h3V5H5v5zm14 4h-3v3h-2v-5h5v2zM17 5v2h3v3h2V5h-5z"/></svg>;
 const CloseIcon = () => <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
 const ChevronLeftIcon = () => <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>;
 const ChevronRightIcon = () => <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>;
 
 
-// --- Animated Background (Reused) ---
 const AnimatedGlowBackground = () => (
   <div className="absolute inset-0 -z-50 overflow-hidden bg-black">
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-amber-500/10 to-transparent rounded-full animate-pulse-slow blur-3xl"></div>
-    <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-radial from-yellow-600/10 to-transparent rounded-full animate-pulse-slow animation-delay-4000 blur-3xl"></div>
+    <div className="absolute bottom-1/A4 right-1/4 w-[500px] h-[500px] bg-gradient-radial from-yellow-600/10 to-transparent rounded-full animate-pulse-slow animation-delay-4000 blur-3xl"></div>
   </div>
 );
 
-// --- ✨ NEW: Gilded Image Card with Floating Animation ---
 const ImageCard = ({ src, alt, layoutId, onClick }) => {
   return (
     <motion.div
@@ -42,7 +39,6 @@ const ImageCard = ({ src, alt, layoutId, onClick }) => {
 };
 
 
-// --- ✨ NEW: Cinematic Lightbox ---
 const Lightbox = ({ selectedImage, setSelectedImage, eventImages }) => {
   if (!selectedImage) return null;
 
@@ -61,49 +57,43 @@ const Lightbox = ({ selectedImage, setSelectedImage, eventImages }) => {
       exit={{ opacity: 0 }}
       onClick={() => setSelectedImage(null)}
     >
-        {/* Main Image */}
-        <motion.img
-            layoutId={selectedImage.id}
-            src={selectedImage.src}
-            className="max-w-[90vw] max-h-[85vh] object-contain z-10"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
-        />
+      <motion.img
+          layoutId={selectedImage.id}
+          src={selectedImage.src}
+          className="max-w-[90vw] max-h-[85vh] object-contain z-10"
+          onClick={(e) => e.stopPropagation()}
+      />
 
-        {/* Close Button */}
-        <motion.button
-            className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
-            onClick={() => setSelectedImage(null)}
-            whileHover={{ scale: 1.1, rotate: 90 }}
-        >
-            <CloseIcon/>
-        </motion.button>
+      <motion.button
+          className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
+          onClick={() => setSelectedImage(null)}
+          whileHover={{ scale: 1.1, rotate: 90 }}
+      >
+          <CloseIcon/>
+      </motion.button>
 
-        {/* Prev Button */}
-        <motion.button
-            className="absolute left-6 text-gray-500 hover:text-white transition-colors"
-            onClick={(e) => {e.stopPropagation(); navigate(-1);}}
-            whileHover={{ scale: 1.1, x: -5 }}
-        >
-            <ChevronLeftIcon />
-        </motion.button>
+      <motion.button
+          className="absolute left-6 text-gray-500 hover:text-white transition-colors"
+          onClick={(e) => {e.stopPropagation(); navigate(-1);}}
+          whileHover={{ scale: 1.1, x: -5 }}
+      >
+          <ChevronLeftIcon />
+      </motion.button>
 
-        {/* Next Button */}
-        <motion.button
-            className="absolute right-6 text-gray-500 hover:text-white transition-colors"
-            onClick={(e) => {e.stopPropagation(); navigate(1);}}
-            whileHover={{ scale: 1.1, x: 5 }}
-        >
-            <ChevronRightIcon />
-        </motion.button>
+      <motion.button
+          className="absolute right-6 text-gray-500 hover:text-white transition-colors"
+          onClick={(e) => {e.stopPropagation(); navigate(1);}}
+          whileHover={{ scale: 1.1, x: 5 }}
+      >
+          <ChevronRightIcon />
+      </motion.button>
     </motion.div>
   );
 };
 
-// --- Main Gallery Page Component ---
 const GalleryPage = () => {
     const [selectedImage, setSelectedImage] = React.useState(null);
 
-    // Based on research of E-Cell NIT Bhopal events
     const galleryData = [
         {
             title: "E-Summit '25",
@@ -139,14 +129,13 @@ const GalleryPage = () => {
             title: "Case Study",
             description: "Fostering skills for tomorrow's leaders.",
             images: [
-                { id: "ws1", src: "https://placehold.co/600x400/3a3a3a/FBBF24?text=Digital+Marketing", alt: "Digital Marketing Workshop" },
+                { id: "ws1", src: "httpsD://placehold.co/600x400/3a3a3a/FBBF24?text=Digital+Marketing", alt: "Digital Marketing Workshop" },
                 { id: "ws2", src: "https://placehold.co/600x400/333333/FBBF24?text=Blockchain+Seminar", alt: "Blockchain Seminar" },
                 { id: "ws3", src: "https://placehold.co/600x400/383838/FBBF24?text=Finance+101", alt: "Finance Workshop" },
             ]
         },
     ];
 
-    // This state will hold which event's images are for the lightbox
     const [activeEventImages, setActiveEventImages] = React.useState([]);
 
     const openLightbox = (image, images) => {
@@ -159,7 +148,6 @@ const GalleryPage = () => {
             <AnimatedGlowBackground />
 
             <main className="relative z-10">
-                {/* Parallax Hero Section */}
                 <section className="text-center py-24 md:py-32">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -179,7 +167,6 @@ const GalleryPage = () => {
                     </motion.p>
                 </section>
 
-                {/* Event Filmstrips */}
                 <div className="space-y-24 pb-24">
                     {galleryData.map((event) => (
                         <section key={event.title}>
@@ -235,4 +222,3 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
-
