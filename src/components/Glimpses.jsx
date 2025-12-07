@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -9,11 +12,11 @@ import "../app/globals.css"; // Ensure you have the necessary styles
 export default function MovieCarousel() {
   // Add your movies/images here
   const movies = [
-    { id: 1, title: "Adventure", description: "Epic journey", image: "/logo.webp" },
-    { id: 2, title: "Mystery", description: "Suspenseful tale", image: "/logo.webp" },
-    { id: 3, title: "Comedy", description: "Fun for all", image: "/logo.webp" },
-    { id: 4, title: "Romance", description: "Love story", image: "/logo.webp" },
-    { id: 5, title: "Sci-Fi", description: "Futuristic adventure", image: "/logo.webp" },
+    { id: 1,  image: "/logo.webp" },
+    { id: 2, image: "/logo.webp" },
+    { id: 3, image: "/logo.webp" },
+    { id: 4, image: "/logo.webp" },
+    { id: 5, image: "/logo.webp" },
   ];
 
   // Duplicate slides for seamless loop
@@ -27,7 +30,7 @@ export default function MovieCarousel() {
       containScroll: "trimSnaps",
       dragFree: true,
     },
-    [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })]
+    [Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })]
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -64,17 +67,38 @@ export default function MovieCarousel() {
     };
   }, [emblaApi]);
 
+  gsap.registerPlugin(ScrollTrigger);
+
+const headingRef = useRef(null);
+
+  useEffect(() => {
+    if (!headingRef.current) return;
+
+    gsap.from(headingRef.current, {
+  opacity: 0,
+  y: 40,
+  duration: 1.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: headingRef.current,
+    start: "top 85%",
+  },
+});
+  }, []);
+
   return (
     <div className="relative w-full py-16">
       {/* Heading */}
-      <h2 className="text-4xl md:text-6xl font-bold text-center bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent mb-12">
+      <h2 
+      ref ={headingRef}
+      className="text-4xl md:text-6xl font-bold text-center bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent mb-12">
         Glimpses of Last Year
       </h2>
 
       {/* Carousel */}
       <div className="relative w-full">
         <div className="overflow-hidden [perspective:1500px]" ref={emblaRef}>
-          <div className="flex items-center gap-6 py-12 [transform-style:preserve-3d]">
+          <div className="flex items-center gap-6 py-12 px-8 [transform-style:preserve-3d]">
             {loopedMovies.map((movie, index) => (
               <div
                 key={index}
@@ -83,17 +107,11 @@ export default function MovieCarousel() {
                 <div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video border-2 border-[#fac176] group cursor-pointer transition-all duration-700 hover:scale-105">
                   <img
                     src={movie.image}
-                    alt={movie.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-xl md:text-2xl font-bold mb-1 text-white drop-shadow-lg">
-                      {movie.title}
-                    </h3>
-                    <p className="text-sm md:text-base text-white/90 drop-shadow-md line-clamp-2">
-                      {movie.description}
-                    </p>
+                    
                   </div>
                 </div>
               </div>
@@ -101,19 +119,7 @@ export default function MovieCarousel() {
           </div>
         </div>
 
-        {/* Navigation */}
-        <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 hover:scale-110 transition-all duration-300"
-          onClick={scrollPrev}
-        >
-          <ChevronLeft className="h-8 w-8 text-white" />
-        </button>
-        <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 hover:scale-110 transition-all duration-300"
-          onClick={scrollNext}
-        >
-          <ChevronRight className="h-8 w-8 text-white" />
-        </button>
+        
 
         {/* Pagination */}
         <div className="flex justify-center gap-2 mt-6">

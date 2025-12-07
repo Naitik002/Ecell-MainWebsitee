@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@studio-freight/lenis": "^1.0.42",
     "@tabler/icons-react": "^3.35.0",
     "class-variance-authority": "^0.7.1",

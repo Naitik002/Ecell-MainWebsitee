@@ -3,6 +3,8 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
 import LightRays from './LightRays';
+// 🆕 Framer Motion import
+import { motion, AnimatePresence } from 'framer-motion';
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -48,7 +50,35 @@ const cardData = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
 
         image: './logo.webp'
+    },
+    {
+        color: '#060010',
+        title: 'Pitchers',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        image: './logo.webp'
+    },
+    {
+        color: '#060010',
+        title: 'Biz Quiz',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        image: './logo.webp'
+    },
+    {
+        color: '#060010',
+        title: 'Workshop',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        image: './logo.webp'
     }
+];
+
+// Add timeline data for events
+const eventTimeline = [
+    { label: "Startup Expo", color: "#fac176" },
+    { label: "B-Plan", color: "#fac176" },
+    { label: "Case Study", color: "#fac176" },
+    { label: "Pe Charcha", color: "#fac176" },
+    { label: "Event 6", color: "#fac176" },
+    { label: "IPL Auction", color: "#fac176" },
 ];
 
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
@@ -656,11 +686,9 @@ const MagicBento = ({
                 <div
                     className={`grid gap-4 md:gap-8 w-full 
   md:grid-cols-2 
-  [grid-template-areas:'startup_startup''bplan_casestudy''pecharcha_pecharcha''event6_iplauction'] 
+  [grid-template-areas:'startup_startup''bplan_casestudy''pecharcha_pecharcha''event6_iplauction''workshop_workshop''pitchers_bizquiz'] 
   max-w-6xl mx-auto mb-20`}
-
                 >
-
                     {cardData.map((card, index) => {
                         const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] max-h-[55vh] w-full max-w-full p-2 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${enableBorderGlow ? 'card--border-glow' : ''
                             }`;
@@ -680,17 +708,24 @@ const MagicBento = ({
                             return (
                                 <ParticleCard
                                     key={index}
-                                    className={`${baseClassName} ${index === 0
-                                        ? '[grid-area:startup]'
-                                        : index === 1
-                                            ? '[grid-area:bplan]'
-                                            : index === 2
-                                                ? '[grid-area:casestudy]'
-                                                : index === 3
-                                                    ? '[grid-area:pecharcha]'
-                                                    : index === 4
-                                                        ? '[grid-area:event6]'
-                                                        : '[grid-area:iplauction]'
+                                    className={`${baseClassName} ${
+                                        index === 0
+                                            ? '[grid-area:startup]'
+                                            : index === 1
+                                                ? '[grid-area:bplan]'
+                                                : index === 2
+                                                    ? '[grid-area:casestudy]'
+                                                    : index === 3
+                                                        ? '[grid-area:pecharcha]'
+                                                        : index === 4
+                                                            ? '[grid-area:event6]'
+                                                            : index === 5
+                                                                ? '[grid-area:iplauction]'
+                                                                : index === 7
+                                                                    ? '[grid-area:pitchers]'
+                                                                    : index === 6
+                                                                        ? '[grid-area:bizquiz]'
+                                                                        : '[grid-area:workshop]'
                                         } group`}
                                     style={cardStyle}
                                     disableAnimations={shouldDisableAnimations}
@@ -859,10 +894,20 @@ const MagicBento = ({
                     })}
                 </div>
             </BentoCardGrid>
+
+            {/* Timeline for events */}
+            
+
+            {/* 🆕 AnimatePresence for overlay */}
+            <AnimatePresence>
             {isMobile && selectedCard && (
-                <div
-                    className="fixed inset-0 w-screen h-screen bg-black/70 backdrop-blur-md z-[999] animate-fadeIn overflow-hidden"
+                <motion.div
+                    className="fixed inset-0 w-screen h-[100vh] bg-black/70 backdrop-blur-md z-[999] overflow-hidden"
                     onClick={closeOverlay}
+                    initial={{ x: '100%', opacity: 0.6 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: '100%', opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 30, duration: 1 }}
                 >
                     <LightRays
                         raysOrigin="top-center"
@@ -877,15 +922,20 @@ const MagicBento = ({
                         className="custom-rays"
                     />
                     <div
-                        className="absolute top-0 left-0 w-full h-full bg-[#00000] text-white rounded-none p-6 md:p-10 shadow-2xl animate-slideIn"
+                        className="absolute top-0 left-0 w-full h-full bg-[#00000] text-white rounded-none p-6 md:p-10 shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <button
+                        <motion.button
                             onClick={closeOverlay}
-                            className="absolute top-4 right-4 text-[#fac176] text-3xl hover:text-gray-400 "
+                            className="absolute top-4 right-4 text-[#fac176] text-3xl hover:text-gray-400"
+                            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 30, duration: 1 }}
+                            whileTap={{ scale: 0.85, rotate: 20 }}
                         >
                             ×
-                        </button>
+                        </motion.button>
 
                         <div className="flex flex-col justify-center items-start w-full h-full overflow-y-auto">
                             <img
@@ -897,50 +947,9 @@ const MagicBento = ({
                             <p className="text-lg leading-relaxed opacity-90">{selectedCard.description}</p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             )}
-
-            <style jsx>{`
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-
-            @keyframes slideIn {
-                from {
-                transform: translateX(100%);
-                opacity: 0.6;
-                }
-                to {
-                transform: translateX(0);
-                opacity: 1;
-                }
-            }
-
-            @keyframes slideOut {
-                from {
-                transform: translateX(0);
-                opacity: 1;
-                }
-                to {
-                transform: translateX(100%);
-                opacity: 0;
-                }
-            }
-
-            .animate-fadeIn {
-                animation: fadeIn 0.3s ease forwards;
-            }
-
-            .animate-slideIn {
-                animation: slideIn 0.4s ease-out forwards;
-            }
-
-            .animate-slideOut {
-                animation: slideOut 0.4s ease-out forwards;
-            }
-            `}</style>
-
+            </AnimatePresence>
         </>
     );
 };

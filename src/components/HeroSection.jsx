@@ -42,7 +42,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <h3 className="text-[#FAC176] text-base sm:text-lg md:text-xl font-semibold tracking-widest uppercase mb-2 sm:mb-3">
+          <h3 className="bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent text-base sm:text-lg md:text-xl font-semibold tracking-widest uppercase mb-2 sm:mb-3">
             #MakeThingsHappen
           </h3>
 
@@ -60,3 +60,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

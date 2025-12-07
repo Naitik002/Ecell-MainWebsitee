@@ -3,17 +3,43 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import MagicBento from '@/components/Magicbento'
 
+// Timeline events based on MagicBento cardData
+const timelineEvents = [
+
+  { label: "Pe Charcha", color: "#fac176" },
+  { label: "Startup Expo", color: "#fac176" },
+  { label: "B-Plan", color: "#fac176" },
+  { label: "Case Study", color: "#fac176" },
+  { label: "Event 6", color: "#fac176" },
+  { label: "IPL Auction", color: "#fac176" },
+];
+
+
 const events = () => {
   return (
     <main className="w-full mt-40 flex flex-col items-center overflow-hidden">
-      
-      {/* Animated Heading */}
+
       <motion.h1
-        className="text-5xl md:text-7xl font-bold text-center mb-6 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent"
-        initial={{ y: 60, opacity: 0 }}
-        animate={{ y: 0, opacity: 1, transition: { duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] } }}
+        className="text-5xl md:text-7xl mt-10 font-bold text-center mb-6 bg-clip-text text-transparent"
+        initial={false}
       >
-        Our Events
+        <motion.span
+          className="bg-gradient-to-r from-[#fac176] to-[#fac176] text-transparent bg-clip-text"
+          initial={{ x: -60, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] }}
+        >
+          Our
+        </motion.span>
+        <span> </span>
+        <motion.span
+          className="bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent bg-clip-text"
+          initial={{ x: 60, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.25, ease: [0.6, -0.05, 0.01, 0.99] }}
+        >
+          Events
+        </motion.span>
       </motion.h1>
 
       {/* Subtext */}
@@ -30,6 +56,11 @@ const events = () => {
         Explore our lineup of events that ignite innovation, celebrate creativity,  
         and bring the entrepreneurial spirit to life.
       </motion.p>
+      {/* Innovative Animated Timeline */}
+      
+      
+      {/* Animated Heading */}
+      
 
       {/* Animated Bento Section */}
       <motion.div
@@ -41,6 +72,7 @@ const events = () => {
           ease: 'easeOut'
         }}
         whileHover={{ scale: 1.02 }}
+        className="w-full mt-5"
       >
         <MagicBento
           textAutoHide={true}

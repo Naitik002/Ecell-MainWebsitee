@@ -1,6 +1,33 @@
+"use client";
+
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+
 
 export function Testimonials() {
+
+gsap.registerPlugin(ScrollTrigger);
+
+const headingRef = useRef(null);
+
+  useEffect(() => {
+    if (!headingRef.current) return;
+
+    gsap.from(headingRef.current, {
+  opacity: 0,
+  y: 40,
+  duration: 1.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: headingRef.current,
+    start: "top 85%",
+  },
+});
+  }, []);
+
   const testimonials = [
     {
       quote:
@@ -41,7 +68,9 @@ export function Testimonials() {
   return (
     <section className="bg-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center mb-8">
-        <h2 className="text-5xl md:text-7xl font-extrabold bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent sm:text-4xl">
+        <h2 
+        ref = {headingRef}
+        className="text-5xl md:text-7xl font-extrabold bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent sm:text-4xl">
           Testimonials
         </h2>
       </div>

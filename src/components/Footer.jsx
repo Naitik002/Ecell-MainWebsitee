@@ -60,7 +60,7 @@ export function Footer() {
                   E-Cell, NIT Bhopal
                 </h2>
                 <p className="text-gray-400 mt-2 max-w-md">
-                  Igniting the next generation of innovators and leaders.
+                  #makethingshappen
                 </p>
               </div>
 

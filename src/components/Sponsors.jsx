@@ -1,8 +1,30 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
 
 export default function Sponsors() {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+const headingRef = useRef(null);
+
+  useEffect(() => {
+    if (!headingRef.current) return;
+
+    gsap.from(headingRef.current, {
+  opacity: 0,
+  y: 40,
+  duration: 1.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: headingRef.current,
+    start: "top 85%",
+  },
+});
+  }, []);
   // Replace with actual sponsor logo paths for production use
   const sponsors = Array(16).fill("/logo.webp");
 
@@ -23,7 +45,9 @@ export default function Sponsors() {
 
   return (
     <section className="w-full py-16 bg-black">
-      <h2 className="text-4xl md:text-5xl font-bold text-center bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent mb-12">
+      <h2 
+      ref ={headingRef}
+      className="text-5xl md:text-7xl font-bold text-center bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent mb-12">
         Our Sponsors
       </h2>
 
