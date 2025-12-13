@@ -29,42 +29,68 @@ const headingRef = useRef(null);
   }, []);
 
   const testimonials = [
-    {
-      quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-  ];
+  {
+    name: "Niharika Rajiv",
+    designation: "Angel Investor",
+    src: "/testimonials/niharika.png",
+    quote:
+      "It was a pleasure to be at E-Summit 23 at MANIT. The team worked extremely hard to put together an excellent show. They were focused and meticulous and delivered a great experience for the judges and the attendees. Look forward to the next one!",
+  },
+  {
+    name: "Shyam Sekar S",
+    designation:
+      "Chief Mentor and Strategist, Startup Xperts Business Consulting Pvt. Ltd",
+    src: "/testimonials/shyam.png",
+    quote:
+      "It was yet another wonderful experience and amazed at the student run initiative like yours! It was managed professionally right from the time the program was planned, time limits, online session, question time, etc. all handled seamlessly.",
+  },
+  {
+    name: "Dr. Vassundara Nattes",
+    designation:
+      "Global Managing Director, Kathyawad Ventures | Director Corporate Relations, IETO | Forbes 40 Under 40",
+    src: "/testimonials/vassundara.png",
+    quote:
+      "Glad to be associated with Entrepreneurship Cell of MANIT Bhopal. My sincere thanks to E-Cell committee and students for inviting me.",
+  },
+  {
+    name: "Vedansh Thakur",
+    designation: "CFO, Swap Automotive Pvt Ltd",
+    src: "/testimonials/vedansh.png",
+    quote:
+      "Management team were quite helpful and supportive throughout the event. The value created at MANIT campus was quite good and speakers organized were very valuable.",
+  },
+  {
+    name: "Karthik Vidyasagar",
+    designation: "Angel Investor, Odele",
+    src: "/testimonials/karthik.png",
+    quote:
+      "The E-Cell Summit was an excellent example of how students can come together, collaborate, and create something truly remarkable. I am confident that this event will inspire many other students to follow in your footsteps.",
+  },
+  {
+    name: "Shardul Nandapurkar",
+    designation:
+      "Angel Investor | Co-Chair (Office of International Services – Europe Region), Global Governance Initiative",
+    src: "/testimonials/shardul.png",
+    quote:
+      "It was inspiring seeing so many talented startup founders pitching their businesses. A special mention to the entire E-Cell team at MANIT Bhopal who did an absolutely fabulous job of organising a well planned event.",
+  },
+  {
+    name: "Amandeep Singh",
+    designation: "Artist, Performed at E-Summit’23",
+    src: "/testimonials/amandeep.png",
+    quote:
+      "From the moment we arrived, we were greeted with utmost professionalism and warmth. Their commitment and hospitality were truly commendable, creating an unforgettable experience for all participants.",
+  },
+  {
+    name: "Kruti Raiyani",
+    designation: "Head of Investments, Lead Angels",
+    src: "/testimonials/kruti.png",
+    quote:
+      "Liked the passion and enthusiasm of the event. Great team effort and flow of plan.",
+  },
+];
+
+
   return (
     <section className="bg-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center mb-8">

@@ -12,12 +12,21 @@ import "../app/globals.css"; // Ensure you have the necessary styles
 export default function MovieCarousel() {
   // Add your movies/images here
   const movies = [
-    { id: 1,  image: "/logo.webp" },
-    { id: 2, image: "/logo.webp" },
-    { id: 3, image: "/logo.webp" },
-    { id: 4, image: "/logo.webp" },
-    { id: 5, image: "/logo.webp" },
-  ];
+  { id: 1, image: "/glimpses/glimpses1.jpg" },
+  { id: 2, image: "/glimpses/glimpses2.jpg" },
+  { id: 3, image: "/glimpses/glimpses3.jpg" },
+  { id: 4, image: "/glimpses/glimpses4.jpg" },
+  { id: 5, image: "/glimpses/glimpses5.jpg" },
+  { id: 6, image: "/glimpses/glimpses6.jpg" },
+  { id: 7, image: "/glimpses/glimpses7.jpg" },
+  { id: 8, image: "/glimpses/glimpses8.jpg" },
+  { id: 9, image: "/glimpses/glimpses9.jpg" },
+  { id: 10, image: "/glimpses/glimpses10.jpg" },
+  { id: 11, image: "/glimpses/glimpses11.jpg" },
+  { id: 12, image: "/glimpses/glimpses12.jpg" },
+  { id: 13, image: "/glimpses/glimpses13.jpg" },
+];
+
 
   // Duplicate slides for seamless loop
   const loopedMovies = [...movies, ...movies];
@@ -77,7 +86,7 @@ const headingRef = useRef(null);
     gsap.from(headingRef.current, {
   opacity: 0,
   y: 40,
-  duration: 1.2,
+  duration: 0.4,
   ease: "power3.out",
   scrollTrigger: {
     trigger: headingRef.current,

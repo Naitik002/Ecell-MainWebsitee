@@ -8,18 +8,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
     {
-        heading: "Nurturing Innovators",
-        text: "We empower students to become innovators and entrepreneurs by providing them with the right guidance, opportunities, and a platform to showcase their ideas.",
+      title: "Who We Are",
+      text: "Entrepreneurship Cell NIT Bhopal is a voluntary, student-run organisation that works to create a strong entrepreneurial environment and a vibrant startup culture among the youth community."
     },
     {
-        heading: "Resources & Mentorship",
-        text: "Our network connects aspiring entrepreneurs with experienced mentors, industry experts, and essential resources to help turn their visions into reality.",
+      title: "Flagship Event — E-Summit",
+      text: "We host a dynamic array of events under Central India’s largest entrepreneurial fest, E-Summit. These events include Startup Expo, IPL Auction Simulation, Business Plan Competition, Keynote Sessions, Stock Trading Simulation, and more."
     },
     {
-        heading: "Thriving Ecosystem",
-        text: "We foster a vibrant entrepreneurial ecosystem through workshops, events, and collaborations, nurturing creativity and sustainable growth.",
+      title: "Industry Engagement & Community Network",
+      text: "Our podcast series Pe-Charcha features industry leaders, venture capitalists, alumni founders, and investors. Through these conversations, we share insights that guide and inspire future entrepreneurs."
     },
-];
+    {
+      title: "Strong Alumni Support",
+      text: "Our strong network of alumni and sponsors helps us expand our reach every year and continue to ignite ambition and make things happen."
+    }
+  ];
 
 export default function AboutUs() {
     const containerRef = useRef(null);
@@ -143,7 +147,7 @@ export default function AboutUs() {
                             className="p-6 rounded-xl   w-full md:w-[80%]"
                         >
                             <h3 className="text-lg md:text-3xl font-bold mb-2 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
-                                {card.heading}
+                                {card.title}
                             </h3>
                             <p className="text-white text-md md:text-xl">{card.text}</p>
                         </div>

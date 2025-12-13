@@ -249,7 +249,7 @@ const GildedMemberCard = ({ imgLink, personName, personVertical, linkedin, insta
         transition={{ type: 'spring', stiffness: 200, damping: 15 }}
         className="relative p-0.5 rounded-2xl overflow-hidden bg-gradient-to-b from-gray-800 to-black transition-all duration-500 preserve-3d h-full"
       >
-        <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 opacity-0 group-hover:opacity-75 transition-opacity duration-500 animate-aurora"></div>
+        <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#fac176] to-[#633902] opacity-0 group-hover:opacity-75 transition-opacity duration-500 animate-aurora"></div>
         <div className="relative bg-black rounded-[14px] p-6 h-full flex flex-col items-center text-center">
           <motion.img
             src={imgLink}
@@ -259,7 +259,7 @@ const GildedMemberCard = ({ imgLink, personName, personVertical, linkedin, insta
             style={{ transform: 'translateZ(40px)' }}
           />
           <h3
-            className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500"
+            className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]"
             style={{ transform: 'translateZ(20px)' }}
           >
             {personName}
@@ -272,17 +272,17 @@ const GildedMemberCard = ({ imgLink, personName, personVertical, linkedin, insta
           </p>
           <div className="flex space-x-4 mt-auto pt-4">
             {linkedin && (
-              <motion.a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-400 transition-colors duration-300 w-6 h-6" whileHover={{ scale: 1.2, y: -2 }}>
+              <motion.a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#fac176] transition-colors duration-300 w-6 h-6" whileHover={{ scale: 1.2, y: -2 }}>
                 <LinkedinIcon />
               </motion.a>
             )}
             {insta && (
-              <motion.a href={insta} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-400 transition-colors duration-300 w-6 h-6" whileHover={{ scale: 1.2, y: -2 }}>
+              <motion.a href={insta} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#fac176] transition-colors duration-300 w-6 h-6" whileHover={{ scale: 1.2, y: -2 }}>
                 <InstagramIcon />
               </motion.a>
             )}
             {mail && (
-              <motion.a href={mail} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-400 transition-colors duration-300 w-6 h-6" whileHover={{ scale: 1.2, y: -2 }}>
+              <motion.a href={mail} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#fac176] transition-colors duration-300 w-6 h-6" whileHover={{ scale: 1.2, y: -2 }}>
                 <EmailIcon />
               </motion.a>
             )}
@@ -303,7 +303,7 @@ const TeamPage = () => {
 
   const facultyData = [
     {
-      imgLink: "https://placehold.co/200x200/000000/FBBF24?text=AB",
+      imgLink: "/Images-team/DrAkhileshbharwe.webp",
       personName: "Dr. Akhilesh Barve",
       personVertical: "Chairman MRIC",
       linkedin: "https://www.linkedin.com/in/akhilesh-barve-879477201/",
@@ -311,7 +311,7 @@ const TeamPage = () => {
       mail: null
     },
     {
-      imgLink: "https://placehold.co/200x200/000000/FBBF24?text=DK",
+      imgLink: "/Images-team/Dr. Deepak Kumar.webp",
       personName: "Dr. Deepak Kumar",
       personVertical: "Coordinator",
       linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",
@@ -356,8 +356,8 @@ const TeamPage = () => {
           variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
           className="text-center mb-20"
         >
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400 tracking-tighter">
-            The Minds Behind the <span className="bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Mission</span>
+          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#fac176] to-[#633902] tracking-tighter">
+            The Minds Behind the <span className="bg-clip-text bg-gradient-to-r from-white to-white/4">Mission</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Meet the dedicated individuals who drive our vision forward. A collective of innovators, creators, and leaders committed to excellence.
@@ -371,7 +371,7 @@ const TeamPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500"
+              className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]"
             >
               {sectionTitle}
             </motion.h2>
@@ -389,7 +389,7 @@ const TeamPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500"
+              className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]"
             >
               Our Verticals
             </motion.h2>
@@ -399,13 +399,13 @@ const TeamPage = () => {
                   key={vertical}
                   onClick={() => setActiveVertical(vertical)}
                   className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black
-                    ${activeVertical === vertical ? 'text-black' : 'text-amber-400 bg-black border border-amber-400/50 hover:bg-amber-400/10'}`}
+                    ${activeVertical === vertical ? 'text-black' : 'text-[#fac176] bg-black border border-amber-400/50 hover:bg-amber-400/10'}`}
                 >
                   <AnimatePresence>
                     {activeVertical === vertical && (
                       <motion.span
                         layoutId="activeVertical"
-                        className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-500"
+                        className="absolute inset-0 bg-gradient-to-r from-[#fac176] to-[#633902]"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}

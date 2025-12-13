@@ -586,7 +586,7 @@ const AnimatedFormField = ({ label, name, type = 'text', as = 'input', value, on
         htmlFor={name}
         className="absolute left-4 transition-all duration-300 pointer-events-none "
         animate={{
-          y: isFocused || isFilled ? -10 : 20,
+          y: isFocused || isFilled ? -2 : 20,
           scale: isFocused || isFilled ? 0.8 : 1,
           color: isFocused ? '#FBBF24' : '#9CA3AF',
         }}
@@ -603,14 +603,14 @@ const AnimatedFormField = ({ label, name, type = 'text', as = 'input', value, on
         onBlur={() => setIsFocused(false)}
         required={required}
         rows={as === 'textarea' ? 5 : undefined}
-        className="w-full px-4 pt-6 pb-2 rounded-lg border-2 border-gray-700 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/50 outline-none transition-all duration-300 backdrop-blur-sm text-white"
+        className="w-full px-4 pt-6 pb-2 rounded-lg border-2 border-[#fac176] focus:border-amber-400 focus:ring-2 focus:ring-amber-400/50 outline-none transition-all duration-300 backdrop-blur-sm text-white"
       />
     </motion.div>
   );
 };
 
 // --- ✨ NEW: Gilded-Border Card Component ---
-const GildedCoordinatorCard = ({ name, role, email, phone, image, linkedin }) => {
+const GildedCoordinatorCard = ({ name, role, image, linkedin, mail, insta }) => {
   return (
     <motion.div
       variants={fadeInUp}
@@ -619,7 +619,7 @@ const GildedCoordinatorCard = ({ name, role, email, phone, image, linkedin }) =>
       className="relative p-0.5 rounded-2xl group transition-all duration-300 overflow-hidden bg-gradient-to-b from-gray-800 to-black"
     >
       {/* The animated gilded effect */}
-      <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 opacity-0 group-hover:opacity-75 transition-opacity duration-500 animate-aurora"></div>
+      <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#fac176] to-[#633902] opacity-0 group-hover:opacity-75 transition-opacity duration-500 animate-aurora"></div>
 
       <div className="relative bg-black rounded-[14px] p-6 h-full">
         <div className="flex flex-col items-center text-center space-y-4">
@@ -633,20 +633,20 @@ const GildedCoordinatorCard = ({ name, role, email, phone, image, linkedin }) =>
             <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div>
-            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500">{name}</h3>
+            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]">{name}</h3>
             <p className="text-gray-400">{role}</p>
           </div>
-          <div className="pt-2">
+          <div className="pt-2 flex space-x-4">
             {[
-              { icon: <MailIcon />, href: `mailto:${email}`, text: email },
-              { icon: <PhoneIcon />, href: `tel:${phone}`, text: phone },
-              linkedin && { icon: <LinkedinIcon />, href: linkedin, text: "LinkedIn" }
+              { icon: <MailIcon />, href: `${mail}`, text: mail },
+              linkedin && { icon: <LinkedinIcon />, href: linkedin, text: "LinkedIn" }, {
+              }
             ].filter(Boolean).map((item, i) => (
               <a key={i} href={item.href} target="_blank" rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 text-gray-400 hover:text-amber-300 transition-all duration-300 my-2 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0"
+                className="flex items-center justify-center space-x-2 text-gray-400 hover:text-[#fac176] transition-all duration-300 my-2 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0"
                 style={{ transitionDelay: `${100 + i * 100}ms` }}
               >
-                <span className="w-5 h-5">{item.icon}</span> <span>{item.text}</span>
+                <span className="w-5 h-5">{item.icon}</span> 
               </a>
             ))}
           </div>
@@ -707,14 +707,58 @@ const Contact = () => {
 
 
   const studentCoordinators = [
-    { name: "Aisha Sharma", role: "President", email: "aisha.s@ecell.com", phone: "+91 98765 43210", image: "https://placehold.co/200x200/000000/FBBF24?text=AS", linkedin: "https://linkedin.com/in/aishasharma" },
-    { name: "Ben Carter", role: "Vice President", email: "ben.c@ecell.com", phone: "+91 98765 43211", image: "https://placehold.co/200x200/000000/FBBF24?text=BC", linkedin: "https://linkedin.com/in/bencarter" },
-    { name: "Chloe Davis", role: "Head of Marketing", email: "chloe.d@ecell.com", phone: "+91 98765 43212", image: "https://placehold.co/200x200/000000/FBBF24?text=CD", linkedin: "https://linkedin.com/in/chloedavis" },
+    {
+    image: 'Images-Team/Aryan Samil.webp',
+    name: 'Aryan Samil',
+    role: 'President',
+    linkedin: 'https://www.linkedin.com/in/aryan-samil-249414276',
+    insta: 'https://instagram.com/aryann__09?igshid=MzNlNGNkZWQ4Mg==',
+    mail: 'mailto:aryan.samil.54@gmail.com'
+  },
+  {
+    image: 'Images-Team/Sanjana Kumari.webp',
+    name: 'Sanjana Kumari',
+    role: 'Vice President',
+    linkedin: 'https://www.linkedin.com/in/sanjana-kumari-3bab99258',
+    insta: 'https://instagram.com/sanjanaaa._13_?igshid=ZDc4ODBmNjlmNQ==',
+    mail: 'mailto:sanjanaparul940@gmail.com'
+  },
+  {
+    image: 'Images-Team/Eashan Srivastava.webp',
+    name: 'Eashan Srivastava',
+    personVertical: 'Co-Cordinator (Finance)',
+    linkedin: 'https://www.linkedin.com/in/eashan-srivastava-191384255',
+    insta: 'https://instagram.com/eashmo17?igshid=MzNlNGNkZWQ4Mg==',
+    mail: 'mailto:srivastavaeashan@gmail.com'
+  },
+
+  {
+    image: 'Images-Team/Kavish Sarse.jpg',
+    name: 'Kavish Sarse',
+    role: 'Co-Cordinator (Operations)',
+    linkedin: 'https://www.linkedin.com/in/kavish-sarse-0819b3254',
+    insta: 'https://instagram.com/kavish_sarse?igshid=MzNlNGNkZWQ4Mg==',
+    mail: 'mailto:kavishsarse121@gmail.com'
+  },
   ];
 
   const facultyCoordinators = [
-    { name: "Dr. Rohan Verma", role: "Faculty Advisor", email: "rohan.v@nitb.ac.in", phone: "+91 87654 32109", image: "https://placehold.co/200x200/000000/FBBF24?text=RV", linkedin: "https://linkedin.com/in/rohanverma" },
-    { name: "Prof. Priya Mehra", role: "Assoc. Faculty Advisor", email: "priya.m@nitb.ac.in", phone: "+91 87654 32108", image: "https://placehold.co/200x200/000000/FBBF24?text=PM", linkedin: "https://linkedin.com/in/priyamehra" },
+    {
+      image: "/Images-team/DrAkhileshbharwe.webp",
+      name: "Dr. Akhilesh Barve",
+      role: "Chairman MRIC",
+      linkedin: "https://www.linkedin.com/in/akhilesh-barve-879477201/",
+      insta: null,
+      mail: null
+    },
+    {
+      image: "/Images-team/Dr. Deepak Kumar.webp",
+      name: "Dr. Deepak Kumar",
+      role: "Coordinator",
+      linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",
+      insta: null,
+      mail: null
+    },
   ];
 
   return (
@@ -728,8 +772,8 @@ const Contact = () => {
           variants={staggerContainer}
           className="min-h-[70vh] flex flex-col items-center justify-center text-center p-4"
         >
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400 tracking-tighter">
-            Let's Build <span className="bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Together</span>
+          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#fac176] to-[#633902] tracking-tighter">
+            Let's Build <span className="bg-clip-text bg-gradient-to-r from-white to-white/4">Together</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Have a question, a brilliant idea, or just want to connect? We're here for it. Reach out and let's start a conversation that matters.
@@ -746,7 +790,7 @@ const Contact = () => {
           >
             {/* Left Side: Info */}
             <motion.div variants={fadeInUp} className="lg:col-span-2  space-y-8 pt-8 lg:pl-10">
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500">
+              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]">
                 Get in Touch
               </h2>
               {[
@@ -755,7 +799,7 @@ const Contact = () => {
                 { icon: MapPinIcon, title: "Visit Us", content: "MANIT Bhopal, MP, 462003" },
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex items-start space-x-5">
-                  <div className="mt-1 text-amber-400"><item.icon /></div>
+                  <div className="mt-1 text-[#fac176]"><item.icon /></div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-200">{item.title}</h3>
                     {item.href ? (
@@ -773,7 +817,7 @@ const Contact = () => {
             {/* Right Side: Form */}
             <motion.div
               variants={fadeInUp}
-              className="lg:col-span-3  backdrop-blur-md rounded-2xl p-8 border border-gray-800 lg:mr-12"
+              className="lg:col-span-3  backdrop-blur-md rounded-2xl p-8 border border-[#fac176] lg:mr-12"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <AnimatedFormField label="Your Name" name="name" required value={formData.name}
@@ -789,11 +833,11 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className={`group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-amber-400 bg-black rounded-lg shadow-lg transition-all duration-300 border border-gray-700 w-full md:w-auto
+                    className={`group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-[#fac176] bg-black rounded-lg shadow-lg transition-all duration-300 border border-[#fac176] w-full md:w-auto
     ${loading ? "cursor-not-allowed" : "hover:shadow-amber-400/30"}
   `}
                   >
-                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-amber-400 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#fac176] to-[#633902] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                     <span className="relative flex items-center space-x-2 group-hover:text-black transition-colors duration-300">
                       {loading ? (
                         <>
@@ -855,7 +899,7 @@ const Contact = () => {
             variants={staggerContainer}
             className="py-16"
           >
-            <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500">
+            <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]">
               {section.title}
             </motion.h2>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

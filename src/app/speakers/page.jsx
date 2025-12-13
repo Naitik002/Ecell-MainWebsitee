@@ -14,41 +14,95 @@ const fadeUp = {
 
 export default function Speakers() {
   const speakers = [
-    {
-      name: "Ritesh Agarwal",
-      title: "Founder & CEO, OYO Rooms",
-      image: "/speaker1.jpg",
-      quote:
-        "Entrepreneurship isn’t about ideas — it’s about making ideas happen.",
-    },
-    {
-      name: "Peyush Bansal",
-      title: "CEO, Lenskart",
-      image: "/speaker2.jpg",
-      quote:
-        "Start small, stay focused, and build a brand that lasts beyond trends.",
-    },
-    {
-      name: "Vani Kola",
-      title: "Managing Director, Kalaari Capital",
-      image: "/speaker3.jpg",
-      quote:
-        "The future belongs to those who take bold, thoughtful risks today.",
-    },
-    {
-      name: "Kunal Shah",
-      title: "Founder, CRED",
-      image: "/speaker4.jpg",
-      quote:
-        "Execution is the best form of validation an entrepreneur can give their idea.",
-    },
-  ];
+  {
+    name: "Ashneer Grover",
+    title: "Founder, BharatPe",
+    image: "/guests/ashneer-grover.avif",
+  },
+  {
+    name: "Tanu Jain",
+    title: "Founder, Tathastu ICS",
+    image: "/guests/tanu-jain.jpeg",
+  },
+  {
+    name: "Prafull Billore",
+    title: "CEO & Founder, MBA Chai Wala",
+    image: "/guests/prafull-billore.jpeg",
+  },
+  {
+    name: "Sandeep Jain",
+    title: "CEO & Founder, GeeksforGeeks",
+    image: "/guests/sandeep-jain.jpeg",
+  },
+  {
+    name: "Anubhav Dubey",
+    title: "Founder, Chai Sutta Bar",
+    image: "/guests/anubhav-dubey.jpg",
+  },
+  {
+    name: "Nitin Vijay",
+    title: "Founder, Motion Kota",
+    image: "/guests/nitin-vijay.jpeg",
+  },
+  {
+    name: "Dr. Gajendra Purohit",
+    title: "Founder, MathsCare",
+    image: "/guests/gajendra-purohit.jpeg",
+  },
+  {
+    name: "Haseeb Khan",
+    title: "Stand-up Comedian",
+    image: "/guests/haseeb-khan.jpeg",
+  },
+  {
+    name: "Zey Siegel",
+    title: "American Keynote Speaker and Presenter",
+    image: "/guests/zey-siegel.jpeg",
+  },
+  {
+    name: "Abhishek Upmanyu",
+    title: "Stand-up Comedian",
+    image: "/guests/abhishek-upmanyu.jpg",
+  },
+  {
+    name: "Sanjeev Agrawal",
+    title: "Founder, Sage University",
+    image: "/guests/sanjeev-agrawal.jpeg",
+  },
+  {
+    name: "Gaurav Juyal",
+    title: "Learning Experience Designer",
+    image: "/guests/gaurav-juyal.jpeg",
+  },
+  {
+    name: "Nidhi Narwal",
+    title: "Creative Writer and Live Performer",
+    image: "/guests/nidhi-narwal.jpeg",
+  },
+  {
+    name: "Laksh Maheshwari",
+    title: "Storyteller",
+    image: "/guests/laksh-maheshwari.jpeg",
+  },
+  {
+    name: "Vikas Swarup",
+    title: "High Commissioner of India to Canada",
+    image: "/guests/vikas-swarup.jpeg",
+  },
+  {
+    name: "Siddharth Chaturvedi",
+    title: "Director, AISCET",
+    image: "/guests/siddharth-chaturvedi.jpg",
+  },
+];
+
+
 
   return (
     <main className="bg-black text-white overflow-x-hidden">
       {/* Hero Section */}
       <section
-        className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6"
+        className="relative w-full min-h-[70vh] flex flex-col items-center justify-center text-center px-6"
         style={{
           background: `
             radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 80%),
@@ -60,7 +114,7 @@ export default function Speakers() {
         }}
       >
         <motion.h1
-          className="text-4xl md:text-6xl font-bold text-[#FAC176] mb-4"
+          className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902] mb-14"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -80,15 +134,15 @@ export default function Speakers() {
       </section>
 
       {/* Speakers Grid */}
-      <section className="py-20 px-8 md:px-16 bg-gradient-to-b from-black via-[#0A0A0A] to-black">
-        <motion.h2
+      <section className="px-8 md:px-16 bg-gradient-to-b from-black via-[#0A0A0A] to-black">
+        {/* <motion.h2
           className="text-3xl md:text-4xl font-bold text-[#FAC176] mb-12 text-center"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
         >
           Our Distinguished Speakers
-        </motion.h2>
+        </motion.h2> */}
 
         <motion.div
           className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center max-w-6xl mx-auto"
@@ -112,9 +166,6 @@ export default function Speakers() {
                   {speaker.name}
                 </h3>
                 <p className="text-[#FAC176] text-sm mb-3">{speaker.title}</p>
-                <p className="text-white/90 italic text-sm">
-                  “{speaker.quote}”
-                </p>
               </div>
             </div>
           ))}
@@ -122,7 +173,7 @@ export default function Speakers() {
       </section>
 
       {/* Featured Talks / Testimonials */}
-      <section className="py-20 px-8 md:px-16">
+      {/* <section className="py-20 px-8 md:px-16">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-[#FAC176] mb-12 text-center"
           variants={fadeUp}
@@ -148,7 +199,7 @@ export default function Speakers() {
             — Ritesh Agarwal, OYO
           </span>
         </motion.div>
-      </section>
+      </section> */}
 
       {/* Invite a Speaker */}
       <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black px-8 md:px-16">

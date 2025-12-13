@@ -15,59 +15,62 @@ const cardData = [
     {
         color: '#060010',
         title: 'Startup Expo',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
-        image: './logo.webp'
+        description: 'Startup Expo is a dynamic showcase of innovation, bringing founders and their startups together with executives, investors, venture capitalists, and students on a single platform. As the cornerstone event of E-Summit, it attracted a staggering 30,000+ footfall and highlighted the vision and creativity of entrepreneurs. Furthermore, startups received recognition through prizes and grants, offering a powerful opportunity for funding, networking and mentorship.',
+        image: './events/startupExpo.jpg'
     },
     {
         color: '#060010',
-        title: 'B-Plan',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+        title: 'Business Plan',
+        description: 'Business Plan Competition gives participants a chance to transform their vision into ventures with real-world impact, while also offering an excellent opportunity to learn the nuances of entrepreneurship. Participants refine their ideas into actionable business models and with guidance from expert judges, gain practical insight that propels them in their entrepreneurial journey.',
         image: './logo.webp'
     },
     {
         color: '#060010',
         title: 'Case Study',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
-        image: './logo.webp'
+        description: 'Case Study Competition is a strategic challenge that pushes participants to question conventional thinking patterns. As they compete to discover the most creative solutions, they encounter real problems faced by business ventures and startups. Consequently, the event strengthens their ability to tackle such challenges and sharpens their problem-solving and critical-thinking skills, qualities essential for aspiring changemakers.',
+        image: './events/caseStudy.jpg'
     },
     {
         color: '#060010',
-        title: 'Pe Charcha',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+        title: 'Keynote Session',
+        description: 'Igniting ambition and ideas, Keynote Sessions are electric exchanges that challenge conventions, empower the entrepreneurial drive and spark bold visions for the future. Moreover, from startup struggles to success secrets, these discussions fuel ideas, change perspectives and inspire the next generation of changemakers.',
 
         image: './logo.webp'
     },
     {
         color: '#060010',
-        title: 'Event 6',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+        title: 'Stock Trading Simulation',
+        description: 'Stock Trading Simulation puts financial foresight to the test, offering a real-time virtual market where sharp decisions race against the clock. In this risk-free environment, participants gain courage and clarity, empowering them to leap into real-world markets with greater confidence and insight.',
 
         image: './logo.webp'
     },
     {
         color: '#060010',
         title: 'IPL Auction',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+        description: 'IPL Auction Simulation is where strategy and decision meet timely precision, emulating the real IPL auction with ten teams competing in a high-energy bidding process to assemble the best squad with limited virtual currency. Additionally, the event is designed to evaluate entrepreneurial capability, as every bid influences a team’s strategy and leads to the selection of their final eleven.',
 
-        image: './logo.webp'
+        image: './events/iplAuction.jpg'
     },
     {
         color: '#060010',
-        title: 'Pitchers',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: './logo.webp'
+        title: 'Book Fair',
+        description: 'Book Fair is a vibrant celebration of knowledge, offering a diverse collection of books across fiction, finance, technology and self-improvement. It creates a unique space for like-minded individuals to connect and share an interest for reading. Moreover, it engages young minds by opening doors to vast intellectual resources and opportunities, all while fostering a renewed passion for books.',
+
+        image: './events/iplAuction.jpg'
     },
     {
         color: '#060010',
-        title: 'Biz Quiz',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: './logo.webp'
+        title: 'Creators camp',
+        description: 'The Creator’s Camp hosts an exciting lineup of influential creators and artists who share their journeys to success and recognition. This is followed by light-hearted Q&A rounds and enriching fan interactions. With guests ranging from contemporary icons to comedians, storytellers to motivational speakers, the event brings inspiration and entertainment to the heart of E-Summit’s entrepreneurial spirit.',
+
+        image: './events/iplAuction.jpg'
     },
     {
         color: '#060010',
-        title: 'Workshop',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: './logo.webp'
+        title: 'Business Plan Junior',
+        description: 'Business Plan Junior Competition is an exclusive event for the first and second year students to compete in the quest of finding an idea that has the potential to become a startup, putting their problem solving capacity to test and encouraging them to innovate and strategize to take their ideas from ideation to validation phase under the mentorship of seasoned industry professionals. ',
+
+        image: './events/iplAuction.jpg'
     }
 ];
 
@@ -736,7 +739,7 @@ const MagicBento = ({
                                     enableMagnetism={enableMagnetism}
                                 >
                                     <div
-                                        className="absolute inset-0 bg-contain bg-center transition-transform duration-700 ease-out scale-100 group-hover:scale-110 group-hover:opacity-50"
+                                        className="absolute inset-0 bg-cover bg-no-repeat bg-center transition-transform duration-700 ease-out scale-100 group-hover:scale-110 group-hover:opacity-50"
                                         style={{ backgroundImage: `url(${card.image})` }}
                                     />
 
