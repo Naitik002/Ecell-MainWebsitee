@@ -708,7 +708,7 @@ const Contact = () => {
 
   const studentCoordinators = [
     {
-    image: 'Images-Team/Aryan Samil.webp',
+    image: '/Images-team/Aryan Samil.webp',
     name: 'Aryan Samil',
     role: 'President',
     linkedin: 'https://www.linkedin.com/in/aryan-samil-249414276',
@@ -716,7 +716,7 @@ const Contact = () => {
     mail: 'mailto:aryan.samil.54@gmail.com'
   },
   {
-    image: 'Images-Team/Sanjana Kumari.webp',
+    image: '/Images-team/Sanjana Kumari.webp',
     name: 'Sanjana Kumari',
     role: 'Vice President',
     linkedin: 'https://www.linkedin.com/in/sanjana-kumari-3bab99258',
@@ -724,16 +724,16 @@ const Contact = () => {
     mail: 'mailto:sanjanaparul940@gmail.com'
   },
   {
-    image: 'Images-Team/Eashan Srivastava.webp',
+    image: '/Images-team/Eashan Srivastava.webp',
     name: 'Eashan Srivastava',
-    personVertical: 'Co-Cordinator (Finance)',
+    role: 'Co-Cordinator (Finance)',
     linkedin: 'https://www.linkedin.com/in/eashan-srivastava-191384255',
     insta: 'https://instagram.com/eashmo17?igshid=MzNlNGNkZWQ4Mg==',
     mail: 'mailto:srivastavaeashan@gmail.com'
   },
 
   {
-    image: 'Images-Team/Kavish Sarse.jpg',
+    image: '/Images-team/Kavish Sarse.jpg',
     name: 'Kavish Sarse',
     role: 'Co-Cordinator (Operations)',
     linkedin: 'https://www.linkedin.com/in/kavish-sarse-0819b3254',
@@ -754,7 +754,7 @@ const Contact = () => {
     {
       image: "/Images-team/Dr. Deepak Kumar.webp",
       name: "Dr. Deepak Kumar",
-      role: "Coordinator",
+      rolt: "Coordinator",
       linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",
       insta: null,
       mail: null
