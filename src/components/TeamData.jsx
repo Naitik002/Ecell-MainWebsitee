@@ -1,6 +1,6 @@
 export const data1 = [
   {
-    imgLink: 'Images-Team/Aryan Samil.webp',
+    imgLink: '/Images-team/Aryan Samil.webp',
     personName: 'Aryan Samil',
     personVertical: 'President',
     linkedin: 'https://www.linkedin.com/in/aryan-samil-249414276',
@@ -8,7 +8,7 @@ export const data1 = [
     mail: 'mailto:aryan.samil.54@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Sanjana Kumari.webp',
+    imgLink: '/Images-team/Sanjana Kumari.webp',
     personName: 'Sanjana Kumari',
     personVertical: 'Vice President',
     linkedin: 'https://www.linkedin.com/in/sanjana-kumari-3bab99258',
@@ -16,7 +16,7 @@ export const data1 = [
     mail: 'mailto:sanjanaparul940@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Eashan Srivastava.webp',
+    imgLink: '/Images-team/Eashan Srivastava.webp',
     personName: 'Eashan Srivastava',
     personVertical: 'Co-Cordinator (Finance)',
     linkedin: 'https://www.linkedin.com/in/eashan-srivastava-191384255',
@@ -25,7 +25,7 @@ export const data1 = [
   },
 
   {
-    imgLink: 'Images-Team/Kavish Sarse.jpg',
+    imgLink: '/Images-team/Kavish Sarse.jpg',
     personName: 'Kavish Sarse',
     personVertical: 'Co-Cordinator (Operations)',
     linkedin: 'https://www.linkedin.com/in/kavish-sarse-0819b3254',
@@ -33,7 +33,7 @@ export const data1 = [
     mail: 'mailto:kavishsarse121@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Parv Lathi.webp',
+    imgLink: '/Images-team/Parv Lathi.webp',
     personName: 'Parv Lathi',
     personVertical: 'Treasurer',
     linkedin: 'https://www.linkedin.com/in/parv-lathi-98201025a',
@@ -41,7 +41,7 @@ export const data1 = [
     mail: 'mailto:Parvlathi005@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Ayushi Rathore.webp',
+    imgLink: '/Images-team/Ayushi Rathore.webp',
     personName: 'Ayushi Rathore',
     personVertical: 'General Secretary',
     linkedin: 'https://www.linkedin.com/in/ayushi-rathore-786141253',
@@ -49,7 +49,7 @@ export const data1 = [
     mail: 'mailto:ayushir117@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Manav Rao.webp',
+    imgLink: '/Images-team/Manav Rao.webp',
     personName: 'Manav Rao',
     personVertical: 'General Secretary',
     linkedin: 'https://www.linkedin.com/in/manav-rao-276311260',
@@ -57,7 +57,7 @@ export const data1 = [
     mail: 'mailto:manavrao063@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Samarth Saxena.webp',
+    imgLink: '/Images-team/Samarth Saxena.webp',
     personName: 'Samarth Saxena',
     personVertical: 'Sponsorship & Media Head',
     linkedin: 'https://www.linkedin.com/in/saxena2709',
@@ -65,7 +65,7 @@ export const data1 = [
     mail: 'mailto:samarth27.09.03@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Laya Lodha.webp',
+    imgLink: '/Images-team/Laya Lodha.webp',
     personName: 'Laya Lodha',
     personVertical: 'Sponsorship & Media Head',
     linkedin: 'https://www.linkedin.com/in/laya-lodha-082b31253/',
@@ -73,7 +73,7 @@ export const data1 = [
     mail: 'about:blank#'
   },
   {
-    imgLink: 'Images-Team/cherisha jajodia.webp',
+    imgLink: '/Images-team/cherisha jajodia.webp',
     personName: 'Cherisha Jajodia',
     personVertical: 'Events Head',
     linkedin: 'https://www.linkedin.com/in/cherisha-jajodia-49529b18a',
@@ -81,7 +81,7 @@ export const data1 = [
     mail: 'mailto:cherishajajodia@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Kunal Vishwakarma.webp',
+    imgLink: '/Images-team/Kunal Vishwakarma.webp',
     personName: 'Kunal Vishwakarma',
     personVertical: 'Events Head',
     linkedin: 'https://www.linkedin.com/in/kunal-vishwakarma-2a1320261',
@@ -89,7 +89,7 @@ export const data1 = [
     mail: 'mailto:vkunaloff@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Arushi Mishra.webp',
+    imgLink: '/Images-team/Arushi Mishra.webp',
     personName: 'Arushi Mishra',
     personVertical: 'Startup and Corporate Relations Head',
     linkedin: 'https://www.linkedin.com/in/arushi-mishra-469692251',
@@ -97,7 +97,7 @@ export const data1 = [
     mail: 'mailto:arushimishra2502@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Ayushi Chouhan.webp',
+    imgLink: '/Images-team/Ayushi Chouhan.webp',
     personName: 'Ayushi Chouhan',
     personVertical: 'Startup and Corporate Relations Head',
     linkedin: 'https://www.linkedin.com/in/ayushi-chouhan-3695b6277',
@@ -105,7 +105,7 @@ export const data1 = [
     mail: 'mailto:ayushi.chouhan04@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Ananya Sharma.webp',
+    imgLink: '/Images-team/Ananya Sharma.webp',
     personName: 'Ananya Sharma',
     personVertical: 'Alumni Convener',
     linkedin: 'https://www.linkedin.com/in/ananya-sharma-937177262',
@@ -113,7 +113,7 @@ export const data1 = [
     mail: 'mailto:ananya2k3sharma@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Ranojit Sikdar.webp',
+    imgLink: '/Images-team/Ranojit Sikdar.webp',
     personName: 'Ranojit Sikdar',
     personVertical: 'Head of Operations',
     linkedin: 'https://www.linkedin.com/in/ranojit-sikdar-040540277',
@@ -121,7 +121,7 @@ export const data1 = [
     mail: 'mailto:ranojitsikdar.19.1.03@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Ashish Gupta.webp',
+    imgLink: '/Images-team/Ashish Gupta.webp',
     personName: 'Ashish Gupta',
     personVertical: 'Hospitality Head',
     linkedin: 'https://www.linkedin.com/in/ashish-gupta-19a186256',
@@ -129,7 +129,7 @@ export const data1 = [
     mail: 'mailto:ashishgupta0613@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Keerthi Bommareddy.webp',
+    imgLink: '/Images-team/Keerthi Bommareddy.webp',
     personName: 'Keerthi Bommareddy',
     personVertical: 'Outreach Head',
     linkedin: 'https://www.linkedin.com/in/keerthi-bommareddy-2b567b277',
@@ -137,7 +137,7 @@ export const data1 = [
     mail: 'mailto:keerthi.mvm@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Pavan Patidar.webp',
+    imgLink: '/Images-team/Pavan Patidar.webp',
     personName: 'Pavan Patidar',
     personVertical: 'Creatives Head',
     linkedin: 'https://www.linkedin.com/in/pavan-patidar-558199258',
@@ -145,7 +145,7 @@ export const data1 = [
     mail: 'mailto:patidarpavan136@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Mohit Gunani.webp',
+    imgLink: '/Images-team/Mohit Gunani.webp',
     personName: 'Mohit Gunani',
     personVertical: 'Marketing Head',
     linkedin: 'https://www.linkedin.com/in/mohit-gunani-20009124b',
@@ -153,7 +153,7 @@ export const data1 = [
     mail: 'mailto:gunanimohit14@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Avantika Singh.webp',
+    imgLink: '/Images-team/Avantika Singh.webp',
     personName: 'Avantika Singh',
     personVertical: 'Design Head',
     linkedin: 'https://www.linkedin.com/in/avantika-singh-704a46257',
@@ -161,7 +161,7 @@ export const data1 = [
     mail: 'mailto:avantikasingh03avi@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Anushmita Paul.webp',
+    imgLink: '/Images-team/Anushmita Paul.webp',
     personName: 'Anushmita Paul',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/anushmita-paul-95970b259/',
@@ -169,7 +169,7 @@ export const data1 = [
     mail: 'mailto:iam.anushmita@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Archita Singh.webp',
+    imgLink: '/Images-team/Archita Singh.webp',
     personName: 'Archita Singh',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/archita-singh-815915262',
@@ -177,7 +177,7 @@ export const data1 = [
     mail: 'mailto:archita13singh@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Ayush Maurya.webp',
+    imgLink: '/Images-team/Ayush Maurya.webp',
     personName: 'Ayush Maurya',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/ayush5556/',
@@ -185,7 +185,7 @@ export const data1 = [
     mail: 'mailto:amaurya5556@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Kratika Jain.webp',
+    imgLink: '/Images-team/Kratika Jain.webp',
     personName: 'Kratika Jain',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/kratika-jain-944814267',
@@ -193,7 +193,7 @@ export const data1 = [
     mail: 'mailto:0201it211045@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Manas Bhutada.webp',
+    imgLink: '/Images-team/Manas Bhutada.webp',
     personName: 'Manas Bhutada',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/manas-bhutada-203162250',
@@ -201,7 +201,7 @@ export const data1 = [
     mail: 'mailto:manasbhutada19@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Manas Chaturvedi.webp',
+    imgLink: '/Images-team/Manas Chaturvedi.webp',
     personName: 'Manas Chaturvedi',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/manas-chaturvedi-a38229190/',
@@ -209,7 +209,7 @@ export const data1 = [
     mail: 'mailto:manasc2009@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Mayank Suryavanshi.webp',
+    imgLink: '/Images-team/Mayank Suryavanshi.webp',
     personName: 'Mayank Suryavanshi',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/mayank-suryawanshi-136977277',
@@ -217,7 +217,7 @@ export const data1 = [
     mail: 'mailto:Mayanksuryawanshi98@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Omkar Gochade.webp',
+    imgLink: '/Images-team/Omkar Gochade.webp',
     personName: 'Omkar Gochade',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/omkar-gochade-9b7b9724a',
@@ -225,7 +225,7 @@ export const data1 = [
     mail: 'mailto:omkargochademanit@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Priyansh Malviya.webp',
+    imgLink: '/Images-team/Priyansh Malviya.webp',
     personName: 'Priyansh Malviya',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/priyansh-malviya-1a9780258',
@@ -233,7 +233,7 @@ export const data1 = [
     mail: 'mailto:priyanshmalviya6268@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Sai Sathwik.webp',
+    imgLink: '/Images-team/Sai Sathwik.webp',
     personName: 'Sai Sathwik',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/sai-sathwik-pabba-56b117250',
@@ -241,7 +241,7 @@ export const data1 = [
     mail: 'mailto:sathwikgupta04@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Shreya Pandey.webp',
+    imgLink: '/Images-team/Shreya Pandey.webp',
     personName: 'Shreya Pandey',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/shreya-pandey-09ba26250',
@@ -249,7 +249,7 @@ export const data1 = [
     mail: 'mailto:pandeyshreya3851@gmail.com'
   },
   {
-    imgLink: 'Images-Team/siddak Rajpal.webp',
+    imgLink: '/Images-team/siddak Rajpal.webp',
     personName: 'Siddak Rajpal',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/siddak-rajpal-21b32b233/',
@@ -257,7 +257,7 @@ export const data1 = [
     mail: 'mailto:siddakrajpal14@gmail.com'
   },
   {
-    imgLink: 'Images-Team/Yogesh Suryavanshi.png',
+    imgLink: '/Images-team/Yogesh Suryavanshi.png',
     personName: 'Yogesh Ahirwar',
     personVertical: 'Executive',
     linkedin: 'https://www.linkedin.com/in/yogesh-suryavanshi-892895241',
