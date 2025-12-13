@@ -22,7 +22,7 @@ const cardData = [
         color: '#060010',
         title: 'Business Plan',
         description: 'Business Plan Competition gives participants a chance to transform their vision into ventures with real-world impact, while also offering an excellent opportunity to learn the nuances of entrepreneurship. Participants refine their ideas into actionable business models and with guidance from expert judges, gain practical insight that propels them in their entrepreneurial journey.',
-        image: './logo.webp'
+        image: './events/bussinessPlan.jpg'
     },
     {
         color: '#060010',
@@ -35,14 +35,15 @@ const cardData = [
         title: 'Keynote Session',
         description: 'Igniting ambition and ideas, Keynote Sessions are electric exchanges that challenge conventions, empower the entrepreneurial drive and spark bold visions for the future. Moreover, from startup struggles to success secrets, these discussions fuel ideas, change perspectives and inspire the next generation of changemakers.',
 
-        image: './logo.webp'
+        image: './events/keynoteSessions.jpg'
+
     },
     {
         color: '#060010',
-        title: 'Stock Trading Simulation',
-        description: 'Stock Trading Simulation puts financial foresight to the test, offering a real-time virtual market where sharp decisions race against the clock. In this risk-free environment, participants gain courage and clarity, empowering them to leap into real-world markets with greater confidence and insight.',
+        title: 'Business Plan Junior',
+        description: 'Business Plan Junior Competition is an exclusive event for the first and second year students to compete in the quest of finding an idea that has the potential to become a startup, putting their problem solving capacity to test and encouraging them to innovate and strategize to take their ideas from ideation to validation phase under the mentorship of seasoned industry professionals. ',
 
-        image: './logo.webp'
+        image: './events/businessPlanJr.jpg'
     },
     {
         color: '#060010',
@@ -56,21 +57,23 @@ const cardData = [
         title: 'Book Fair',
         description: 'Book Fair is a vibrant celebration of knowledge, offering a diverse collection of books across fiction, finance, technology and self-improvement. It creates a unique space for like-minded individuals to connect and share an interest for reading. Moreover, it engages young minds by opening doors to vast intellectual resources and opportunities, all while fostering a renewed passion for books.',
 
-        image: './events/iplAuction.jpg'
+        image: './events/bookfair.jpg'
     },
+    {
+        color: '#060010',
+        title: 'Stock Trading Simulation',
+        description: 'Stock Trading Simulation puts financial foresight to the test, offering a real-time virtual market where sharp decisions race against the clock. In this risk-free environment, participants gain courage and clarity, empowering them to leap into real-world markets with greater confidence and insight.',
+
+        image: './events/stockTrading.jpeg'
+    },
+    
+    
     {
         color: '#060010',
         title: 'Creators camp',
         description: 'The Creator’s Camp hosts an exciting lineup of influential creators and artists who share their journeys to success and recognition. This is followed by light-hearted Q&A rounds and enriching fan interactions. With guests ranging from contemporary icons to comedians, storytellers to motivational speakers, the event brings inspiration and entertainment to the heart of E-Summit’s entrepreneurial spirit.',
 
-        image: './events/iplAuction.jpg'
-    },
-    {
-        color: '#060010',
-        title: 'Business Plan Junior',
-        description: 'Business Plan Junior Competition is an exclusive event for the first and second year students to compete in the quest of finding an idea that has the potential to become a startup, putting their problem solving capacity to test and encouraging them to innovate and strategize to take their ideas from ideation to validation phase under the mentorship of seasoned industry professionals. ',
-
-        image: './events/iplAuction.jpg'
+        image: './events/creatorsCamp.jpg'
     }
 ];
 
