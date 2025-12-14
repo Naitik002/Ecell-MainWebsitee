@@ -24,7 +24,6 @@ export default function MovieCarousel() {
   { id: 10, image: "/glimpses/glimpses10.jpg" },
   { id: 11, image: "/glimpses/glimpses11.jpg" },
   { id: 12, image: "/glimpses/glimpses12.jpg" },
-  { id: 13, image: "/glimpses/glimpses13.jpg" },
 ];
 
 

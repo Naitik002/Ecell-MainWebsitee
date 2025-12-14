@@ -21,7 +21,7 @@ const ImageCard = ({ src, alt, layoutId, onClick }) => {
     <motion.div
       layoutId={layoutId}
       onClick={onClick}
-      className="relative w-80 h-56 rounded-xl overflow-hidden shadow-lg cursor-pointer flex-shrink-0 group"
+      className="relative w-50 h-30 md:w-80 md:h-56  rounded-xl overflow-hidden shadow-lg cursor-pointer flex-shrink-0 group"
       initial={{ scale: 1 }}
       whileHover={{ scale: 1.05, y: -5 }}
       transition={{ type: 'spring', stiffness: 300, damping: 15 }}
@@ -95,46 +95,45 @@ const GalleryPage = () => {
     const [selectedImage, setSelectedImage] = React.useState(null);
 
     const galleryData = [
-        {
-            title: "E-Summit '25",
-            description: "Our flagship event, a confluence of brilliant minds.",
-            images: [
-                { id: "es1", src: "https://placehold.co/600x400/000000/FBBF24?text=Keynote+Speaker", alt: "Keynote Speaker at E-Summit" },
-                { id: "es2", src: "https://placehold.co/600x400/111111/FBBF24?text=Panel+Discussion", alt: "Panel Discussion" },
-                { id: "es3", src: "https://placehold.co/600x400/0a0a0a/FBBF24?text=Networking+Session", alt: "Networking" },
-                { id: "es4", src: "https://placehold.co/600x400/0f0f0f/FBBF24?text=Award+Ceremony", alt: "Awards" },
-                { id: "es5", src: "https://placehold.co/600x400/141414/FBBF24?text=Audience", alt: "Audience" },
-            ]
-        },
-        {
-            title: "Startup Expo '25",
-            description: "Connecting visionaries with opportunities.",
-            images: [
-                { id: "sc1", src: "https://placehold.co/600x400/1a1a1a/FBBF24?text=Startup+Pitches", alt: "Startup Pitches" },
-                { id: "sc2", src: "https://placehold.co/600x400/1c1c1c/FBBF24?text=Investor+Meet", alt: "Investor Meet" },
-                { id: "sc3", src: "https://placehold.co/600x400/1e1e1e/FBBF24?text=Mentorship+Session", alt: "Mentorship Session" },
-            ]
-        },
-        {
-            title: "Bplan Competition '25",
-            description: "Where groundbreaking ideas take flight.",
-            images: [
-                { id: "is1", src: "https://placehold.co/600x400/2a2a2a/FBBF24?text=Final+Pitches", alt: "Ideastorm Finals" },
-                { id: "is2", src: "https://placehold.co/600x400/222222/FBBF24?text=Judging+Panel", alt: "Judges" },
-                { id: "is3", src: "https://placehold.co/600x400/252525/FBBF24?text=Winners", alt: "Winners" },
-                { id: "is4", src: "https://placehold.co/600x400/282828/FBBF24?text=Team+Collaboration", alt: "Collaboration" },
-            ]
-        },
-        {
-            title: "Case Study",
-            description: "Fostering skills for tomorrow's leaders.",
-            images: [
-                { id: "ws1", src: "httpsD://placehold.co/600x400/3a3a3a/FBBF24?text=Digital+Marketing", alt: "Digital Marketing Workshop" },
-                { id: "ws2", src: "https://placehold.co/600x400/333333/FBBF24?text=Blockchain+Seminar", alt: "Blockchain Seminar" },
-                { id: "ws3", src: "https://placehold.co/600x400/383838/FBBF24?text=Finance+101", alt: "Finance Workshop" },
-            ]
-        },
-    ];
+  {
+    title: "E-Summit' 25",
+    description:
+      "Startup Expo is a dynamic showcase of innovation, bringing founders and their startups together with executives, investors, venture capitalists, and students on a single platform.",
+    images: [
+  { id: "e251", src: "./gallery/Summit25/251.jpg", alt: "Summit 25 Image 1" },
+  { id: "e252", src: "./gallery/Summit25/252.jpg", alt: "Summit 25 Image 2" },
+  { id: "e253", src: "./gallery/Summit25/253.jpg", alt: "Summit 25 Image 3" },
+  { id: "e254", src: "./gallery/Summit25/254.jpg", alt: "Summit 25 Image 4" },
+  { id: "e255", src: "./gallery/Summit25/255.jpg", alt: "Summit 25 Image 5" },
+  { id: "e256", src: "./gallery/Summit25/256.jpg", alt: "Summit 25 Image 6" },
+  { id: "e257", src: "./gallery/Summit25/257.jpg", alt: "Summit 25 Image 7" },
+  { id: "e258", src: "./gallery/Summit25/258.jpg", alt: "Summit 25 Image 8" },
+  { id: "e259", src: "./gallery/Summit25/259.jpg", alt: "Summit 25 Image 9" },
+  { id: "e2510", src: "./gallery/Summit25/2510.jpg", alt: "Summit 25 Image 10" },
+  { id: "e2511", src: "./gallery/Summit25/2511.jpg", alt: "Summit 25 Image 11" },
+  { id: "e2512", src: "./gallery/Summit25/2512.jpg", alt: "Summit 25 Image 12" }
+]
+
+  },
+  {
+    title: "E-Summit' 24",
+    description:
+      "Business Plan Competition gives participants a chance to transform their vision into ventures with real-world impact.",
+    images: [
+  { id: "e241", src: "./gallery/Summit24/244.jpg", alt: "Summit 24 Image 1" },
+  { id: "e242", src: "./gallery/Summit24/248.jpg", alt: "Summit 24 Image 2" },
+  { id: "e243", src: "./gallery/Summit24/243.jpg", alt: "Summit 24 Image 3" },
+  { id: "e244", src: "./gallery/Summit24/246.jpg", alt: "Summit 24 Image 4" },
+  { id: "e245", src: "./gallery/Summit24/245.jpg", alt: "Summit 24 Image 5" },
+  { id: "e246", src: "./gallery/Summit24/241.jpg", alt: "Summit 24 Image 6" },
+  { id: "e247", src: "./gallery/Summit24/247.jpg", alt: "Summit 24 Image 7" },
+  { id: "e248", src: "./gallery/Summit24/242.jpg", alt: "Summit 24 Image 8" }
+]
+
+  },
+  
+];
+
 
     const [activeEventImages, setActiveEventImages] = React.useState([]);
 
@@ -153,9 +152,9 @@ const GalleryPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] }}
-                        className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400 tracking-tighter"
+                        className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#fac176] to-[#633902] tracking-tighter"
                     >
-                        Chronicles of <span className="bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Innovation</span>
+                        Chronicles of <span className="bg-clip-text bg-gradient-to-r from-white to-white/4">Innovation</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -163,7 +162,7 @@ const GalleryPage = () => {
                         transition={{ duration: 0.7, delay: 0.1, ease: [0.6, -0.05, 0.01, 0.99] }}
                         className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto"
                     >
-                        A visual journey through the landmark events, workshops, and moments that define E-Cell NIT Bhopal.
+                        A visual journey through the landmark events that define E-Cell NIT Bhopal.
                     </motion.p>
                 </section>
 
@@ -176,35 +175,46 @@ const GalleryPage = () => {
                                   whileInView={{ opacity: 1, x: 0 }}
                                   viewport={{ once: true, amount: 0.3 }}
                                   transition={{ duration: 0.6, ease: "easeOut" }}
-                                  className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-yellow-500">
+                                  className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]">
                                     {event.title}
                                 </motion.h2>
-                                <motion.p
+                                {/* <motion.p
                                   initial={{ opacity: 0, x: -50 }}
                                   whileInView={{ opacity: 1, x: 0 }}
                                   viewport={{ once: true, amount: 0.3 }}
                                   transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                                   className="text-gray-400 mt-2">
                                     {event.description}
-                                </motion.p>
+                                </motion.p> */}
                             </div>
-                            <motion.div className="flex gap-8 py-4 cursor-grab pl-4 sm:pl-6 lg:pl-8" whileTap={{ cursor: "grabbing" }}>
-                                <motion.div
-                                    drag="x"
-                                    dragConstraints={{ right: 0, left: -((event.images.length * 352) - (typeof window !== 'undefined' ? window.innerWidth : 0) + 100) }}
-                                    className="flex gap-8"
-                                >
-                                    {event.images.map((image) => (
-                                        <ImageCard
-                                            key={image.id}
-                                            src={image.src}
-                                            alt={image.alt}
-                                            layoutId={image.id}
-                                            onClick={() => openLightbox(image, event.images)}
-                                        />
-                                    ))}
-                                </motion.div>
-                            </motion.div>
+                            <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.5 }}
+  className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8"
+>
+  <div
+    className="
+      grid
+      grid-cols-2
+      md:grid-cols-3
+      lg:grid-cols-4
+      gap-6
+    "
+  >
+    {event.images.map((image) => (
+      <ImageCard
+        key={image.id}
+        src={image.src}
+        alt={image.alt}
+        layoutId={image.id}
+        onClick={() => openLightbox(image, event.images)}
+      />
+    ))}
+  </div>
+</motion.div>
+
                         </section>
                     ))}
                 </div>
