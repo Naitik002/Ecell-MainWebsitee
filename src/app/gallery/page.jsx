@@ -120,14 +120,14 @@ const GalleryPage = () => {
     description:
       "Business Plan Competition gives participants a chance to transform their vision into ventures with real-world impact.",
     images: [
-  { id: "e241", src: "./gallery/Summit24/244.jpg", alt: "Summit 24 Image 1" },
-  { id: "e242", src: "./gallery/Summit24/248.jpg", alt: "Summit 24 Image 2" },
-  { id: "e243", src: "./gallery/Summit24/243.jpg", alt: "Summit 24 Image 3" },
-  { id: "e244", src: "./gallery/Summit24/246.jpg", alt: "Summit 24 Image 4" },
-  { id: "e245", src: "./gallery/Summit24/245.jpg", alt: "Summit 24 Image 5" },
-  { id: "e246", src: "./gallery/Summit24/241.jpg", alt: "Summit 24 Image 6" },
-  { id: "e247", src: "./gallery/Summit24/247.jpg", alt: "Summit 24 Image 7" },
-  { id: "e248", src: "./gallery/Summit24/242.jpg", alt: "Summit 24 Image 8" }
+  { id: "e241", src: "./gallery/Summit24/244.JPG", alt: "Summit 24 Image 1" },
+  { id: "e242", src: "./gallery/Summit24/248.JPG", alt: "Summit 24 Image 2" },
+  { id: "e243", src: "./gallery/Summit24/243.JPG", alt: "Summit 24 Image 3" },
+  { id: "e244", src: "./gallery/Summit24/246.JPG", alt: "Summit 24 Image 4" },
+  { id: "e245", src: "./gallery/Summit24/245.JPG", alt: "Summit 24 Image 5" },
+  { id: "e246", src: "./gallery/Summit24/241.JPG", alt: "Summit 24 Image 6" },
+  { id: "e247", src: "./gallery/Summit24/247.JPG", alt: "Summit 24 Image 7" },
+  { id: "e248", src: "./gallery/Summit24/242.JPG", alt: "Summit 24 Image 8" }
 ]
 
   },
