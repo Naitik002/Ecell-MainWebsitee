@@ -107,11 +107,11 @@ const headingRef = useRef(null);
       {/* Carousel */}
       <div className="relative w-full">
         <div className="overflow-hidden [perspective:1500px]" ref={emblaRef}>
-          <div className="flex items-center gap-6 py-12 px-8 [transform-style:preserve-3d]">
+          <div className="flex items-center gap-3 py-12 px-8 [transform-style:preserve-3d]">
             {loopedMovies.map((movie, index) => (
               <div
                 key={index}
-                className="flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_35%] embla__slide"
+                className="flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_35%] embla__slide"
               >
                 <div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video border-2 border-[#fac176] group cursor-pointer transition-all duration-700 hover:scale-105">
                   <img
