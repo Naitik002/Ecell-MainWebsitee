@@ -254,7 +254,7 @@ const GildedMemberCard = ({ imgLink, personName, personVertical, linkedin, insta
           <motion.img
             src={imgLink}
             alt={personName}
-            className="w-32 h-32 object-cover rounded-full border-2 border-gray-700 group-hover:border-amber-400/50 transition-colors duration-300 mb-4"
+            className="w-24 h-24 md:w-32 md:h-32 object-cover aspect-square rounded-full border-2 border-gray-700 group-hover:border-amber-400/50 transition-colors duration-300 mb-4"
             onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/128x128/000000/FBBF24?text=${personName.split(' ').map(n=>n[0]).join('')}`; }}
             style={{ transform: 'translateZ(40px)' }}
           />
