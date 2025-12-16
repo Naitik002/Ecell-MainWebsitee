@@ -2,14 +2,14 @@ import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 
 const DEFAULT_IMAGES = [
-  { id: "e251", src: "./gallery/Summit24/241.jpg", alt: "Summit 25 Image 1" },
-  { id: "e252", src: "./gallery/Summit24/242.jpg", alt: "Summit 25 Image 2" },
-  { id: "e253", src: "./gallery/Summit24/243.jpg", alt: "Summit 25 Image 3" },
-  { id: "e254", src: "./gallery/Summit24/244.jpg", alt: "Summit 25 Image 4" },
-  { id: "e255", src: "./gallery/Summit24/245.jpg", alt: "Summit 25 Image 5" },
-  { id: "e256", src: "./gallery/Summit24/246.jpg", alt: "Summit 25 Image 6" },
-  { id: "e257", src: "./gallery/Summit24/247.jpg", alt: "Summit 25 Image 7" },
-  { id: "e258", src: "./gallery/Summit24/248.jpg", alt: "Summit 25 Image 8" },
+  { id: "e241", src: "./gallery/Summit24/241.JPG", alt: "Summit 25 Image 1" },
+  { id: "e252", src: "./gallery/Summit24/242.JPG", alt: "Summit 25 Image 2" },
+  { id: "e253", src: "./gallery/Summit24/243.JPG", alt: "Summit 25 Image 3" },
+  { id: "e254", src: "./gallery/Summit24/244.JPG", alt: "Summit 25 Image 4" },
+  { id: "e255", src: "./gallery/Summit24/245.JPG", alt: "Summit 25 Image 5" },
+  { id: "e256", src: "./gallery/Summit24/246.JPG", alt: "Summit 25 Image 6" },
+  { id: "e257", src: "./gallery/Summit24/247.JPG", alt: "Summit 25 Image 7" },
+  { id: "e258", src: "./gallery/Summit24/248.JPG", alt: "Summit 25 Image 8" },
 ];
 
 const DEFAULTS = {
