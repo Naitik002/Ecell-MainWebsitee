@@ -30,7 +30,7 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+    return Math.floor(Math.random() * 12) -5;
   };
   return (
     <div
@@ -68,14 +68,14 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom">
+                  className="absolute items-center inset-0 origin-bottom">
                   <img
                     src={testimonial.src}
                     alt={testimonial.name}
-                    width={500}
-                    height={500}
+                    width={200}
+                    height={200}
                     draggable={false}
-                    className="h-full w-full rounded-full object-cover object-center" />
+                    className="rounded-full object-cover object-center" />
                 </motion.div>
               ))}
             </AnimatePresence>

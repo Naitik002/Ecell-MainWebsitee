@@ -12,7 +12,7 @@ const cards = [
       text: "Entrepreneurship Cell NIT Bhopal is a voluntary, student-run organisation that works to create a strong entrepreneurial environment and a vibrant startup culture among the youth community."
     },
     {
-      title: "Flagship Event — E-Summit",
+      title: "Flagship Event - E-Summit",
       text: "We host a dynamic array of events under Central India’s largest entrepreneurial fest, E-Summit. These events include Startup Expo, IPL Auction Simulation, Business Plan Competition, Keynote Sessions, Stock Trading Simulation, and more."
     },
     {
