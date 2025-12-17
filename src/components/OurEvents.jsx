@@ -32,7 +32,7 @@ const ourEvents = () => {
     },
     {
       name: "B-Plan Jr.",
-      image: "/eventsLogo/B-Planjr.jpeg",
+      image: "/eventsLogo/B-PlanJr.jpeg",
     },
     {
       name: "Pe Charcha",
