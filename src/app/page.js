@@ -6,6 +6,8 @@ import useLenis from "./hooks/useLenis";
 import Glimpses from "@/components/Glimpses";
 import { Testimonials } from "@/components/Testinomials";
 import Sponsors from "@/components/Sponsors";
+import InfiniteCarousel from "@/components/infiniteCarousal";
+import OurEvents from "@/components/OurEvents";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <HeroSection />
       <AboutUs />
       <Glimpses/>
+      <OurEvents/>
       <Testimonials/>
+      <InfiniteCarousel/>
       <Sponsors/>
     </main>
   );

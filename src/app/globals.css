@@ -55,3 +55,39 @@ html, body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+@layer utilities {
+  .mask-fade-edges {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+  }
+}
+
+/* Default body text */
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), serif;
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+a {
+  font-family: var(--font-body), system-ui, sans-serif;
+}

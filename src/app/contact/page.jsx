@@ -773,7 +773,7 @@ const Contact = () => {
           className="min-h-[70vh] flex flex-col items-center justify-center text-center p-4"
         >
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#fac176] to-[#633902] tracking-tighter">
-            Let's Build <span className="bg-clip-text bg-gradient-to-r from-white to-white/4">Together</span>
+            Let's Build Together
           </motion.h1>
           <motion.p variants={fadeInUp} className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Have a question, a brilliant idea, or just want to connect? We're here for it. Reach out and let's start a conversation that matters.
@@ -794,7 +794,7 @@ const Contact = () => {
                 Get in Touch
               </h2>
               {[
-                { icon: MailIcon, title: "Email Us", content: "ecell@nitb.ac.in", href: "mailto:ecell@nitb.ac.in" },
+                { icon: MailIcon, title: "Email Us", content: "contact@ecell.com", href: "mailto:ecell@nitb.ac.in" },
                 { icon: PhoneIcon, title: "Call Us", content: "+91 98765 43210", href: "tel:+919876543210" },
                 { icon: MapPinIcon, title: "Visit Us", content: "MANIT Bhopal, MP, 462003" },
               ].map((item, index) => (
@@ -902,7 +902,7 @@ const Contact = () => {
             <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902]">
               {section.title}
             </motion.h2>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap gap-8 justify-center">
               {section.data.map((coordinator, index) => (
                 <GildedCoordinatorCard key={index} {...coordinator} />
               ))}

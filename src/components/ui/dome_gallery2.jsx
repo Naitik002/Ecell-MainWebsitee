@@ -100,8 +100,8 @@ export default function DomeGallery2({
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
   segments = DEFAULTS.segments,
   dragDampening = 2,
-  openedImageWidth = '50vw',
-  openedImageHeight = '70vh',
+  openedImageWidth = '70vw',
+  openedImageHeight = '50px',
   imageBorderRadius = '30px',
   openedImageBorderRadius = '30px',
   grayscale = false
@@ -574,6 +574,7 @@ export default function DomeGallery2({
     overlay.style.borderRadius = openedImageBorderRadius;
     overlay.style.overflow = 'hidden';
     overlay.style.boxShadow = '0 10px 30px rgba(0,0,0,.35)';
+    overlay.style.aspectRatio = '16 / 9';
 
     const rawSrc = parent.dataset.src || el.querySelector('img')?.src || '';
     const rawAlt = parent.dataset.alt || el.querySelector('img')?.alt || '';
@@ -582,7 +583,7 @@ export default function DomeGallery2({
     img.alt = rawAlt;
     img.style.width = '100%';
     img.style.height = '100%';
-    img.style.objectFit = 'cover';
+    img.style.objectFit = 'contain';
     img.style.filter = grayscale ? 'grayscale(1)' : 'none';
     overlay.appendChild(img);
     viewerRef.current.appendChild(overlay);
@@ -737,6 +738,20 @@ export default function DomeGallery2({
       inset: 10px;
       pointer-events: none;
     }
+      @media (max-width: 768px) {
+  .enlarge {
+    max-width: 100vw !important;
+    max-height: 75vh !important;
+    width: auto !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .enlarge img {
+    object-fit: c !important;
+  }
+}
+
   `;
 
   return (

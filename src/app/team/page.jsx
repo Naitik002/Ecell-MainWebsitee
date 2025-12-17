@@ -357,7 +357,7 @@ const TeamPage = () => {
           className="text-center mb-20"
         >
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#fac176] to-[#633902] tracking-tighter">
-            The Minds Behind the <span className="bg-clip-text bg-gradient-to-r from-white to-white/4">Mission</span>
+            The Minds Behind the Mission
           </motion.h1>
           <motion.p variants={fadeInUp} className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Meet the dedicated individuals who drive our vision forward. A collective of innovators, creators, and leaders committed to excellence.
@@ -375,7 +375,7 @@ const TeamPage = () => {
             >
               {sectionTitle}
             </motion.h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
               {teamData[sectionTitle] && teamData[sectionTitle].map((member, index) => (
                 <GildedMemberCard key={`${sectionTitle}-${index}`} {...member} />
               ))}

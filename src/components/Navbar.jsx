@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "HOME", path: "/" },
     { name: "EVENTS", path: "/events" },
     { name: "E-SUMMIT", path: "https://esummit.ecellnitb.in/#" },
-    { name: "SPEAKERS", path: "/speakers" },
+    // { name: "SPEAKERS", path: "/speakers" },
     { name: "GALLERY", path: "/gallery" },
     { name: "TEAM", path: "/team" },
     { name: "SPONSOR US", path: "/sponsors" },
