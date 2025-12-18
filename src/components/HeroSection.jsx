@@ -37,7 +37,7 @@ const HeroSection = () => {
 
         {/* Right Text */}
         <motion.div
-          className="md:w-1/2 min-w-0 w-[80vw] flex flex-col items-center md:items-start text-center md:text-left justify-center md:px-0"
+          className="md:w-1/2 min-w-0 w-[80vw] flex flex-col items-center md:items-start text-center md:text-left justify-center md:px-4"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}

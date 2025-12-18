@@ -16,8 +16,8 @@ export default function Home() {
       <AboutUs />
       <Glimpses/>
       <OurEvents/>
-      <Testimonials/>
       <InfiniteCarousel/>
+      <Testimonials/>
       <Sponsors/>
     </main>
   );

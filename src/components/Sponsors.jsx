@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import SponsorsCarousel from "./SponsorsCarousal";
 
 export default function Sponsors() {
 
@@ -62,7 +63,7 @@ export default function Sponsors() {
         Our Sponsors
       </h2>
 
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
+       {/* <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
         {sponsors.map((sponsor, idx) => (
           <div key={idx} className="w-40 h-27 md:w-60 md:h-40 flex items-center justify-center p-4 bg-white rounded-lg">
             <img
@@ -73,11 +74,13 @@ export default function Sponsors() {
           </div>
         ))}
 
-      </div>
+      </div> */}
+
+      <SponsorsCarousel/>
 
       {/* View More button only for mobile */}
       
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-2">
           <button
             onClick={() => router.push("/sponsors#allSponsors")}
             className="px-6 py-2 rounded-md cursor-pointer bg-[#FAC176] text-black font-semibold hover:bg-[#f8b762] transition"
