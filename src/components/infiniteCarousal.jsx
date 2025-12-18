@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { motion } from 'framer-motion'
 
 export default function TeamCarousel() {
     const speakers = [
@@ -119,9 +120,16 @@ export default function TeamCarousel() {
 
     return (
         <section className="w-full bg-black py-10">
-            <div className="max-w-7xl mx-auto px-4">
-                <h2 className="text-5xl md:text-7xl font-bold text-center mb-15 bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902] mt-10">Our Past Speakers</h2>
-
+            <div className="max-w-7xl mx-auto px-4 text-center">
+                <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fac176] to-[#633902] mb-12"
+        >
+          Our Past Speakers
+        </motion.h2>
                 {/* CAROUSEL */}
                 <div
                     className="relative overflow-hidden rounded-2xl "
