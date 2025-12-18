@@ -292,7 +292,7 @@ export function Footer() {
                   <Mail className="text-xl text-gray-400" /> contact@ecell.com
                 </p>
                 <p className="flex items-center justify-center  gap-2">
-                  <Phone className="text-xl text-gray-400" /> +91 96856 94466
+                  <Phone className="text-xl text-gray-400" /> +91 7000616813
                 </p>
               </div>
 

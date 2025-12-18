@@ -795,7 +795,7 @@ const Contact = () => {
               </h2>
               {[
                 { icon: MailIcon, title: "Email Us", content: "contact@ecell.com", href: "mailto:ecell@nitb.ac.in" },
-                { icon: PhoneIcon, title: "Call Us", content: "+91 98765 43210", href: "tel:+919876543210" },
+                { icon: PhoneIcon, title: "Call Us", content: "+91 70006 16813", href: "tel:+917000616813" },
                 { icon: MapPinIcon, title: "Visit Us", content: "MANIT Bhopal, MP, 462003" },
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex items-start space-x-5">
