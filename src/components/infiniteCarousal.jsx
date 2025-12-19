@@ -119,8 +119,8 @@ export default function TeamCarousel() {
     }
 
     return (
-        <section className="w-full bg-black py-10">
-            <div className="max-w-7xl mx-auto px-4 text-center">
+        <section className=" relative w-full bg-gradient-to-bl from-black to-blue-950 py-10">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
                 <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -181,13 +181,13 @@ export default function TeamCarousel() {
                 </div>
 
                 {/* CONTROLS */}
-                <div className="flex justify-start gap-4 mt-10">
+                <div className="flex justify-start gap-4 mt-10 z-100">
                     <button
                         onClick={() => move('prev')}
                         className="group/button flex h-10 w-10 items-center justify-center
-             rounded-full bg-gray-100 dark:bg-neutral-800
+             rounded-full bg-[#fac176] dark:bg-neutral-800
              hover:bg-[#FAC176] hover:text-black
-             transition-colors"
+             transition-colors border border-white"
                     >
                         <span
                             className="text-black dark:text-neutral-400
@@ -202,7 +202,7 @@ export default function TeamCarousel() {
                         onClick={() => move('next')}
                         className="group/button flex h-10 w-10 items-center justify-center
              rounded-full bg-gray-100 dark:bg-neutral-800
-             hover:bg-[#FAC176] hover:text-black
+             hover:bg-[#FAC176] hover:text-black border border-white
              transition-colors"
                     >
                         <span
@@ -216,6 +216,10 @@ export default function TeamCarousel() {
 
                 </div>
             </div>
+            {/* BOTTOM FADE TO BLACK */}
+<div className="pointer-events-none absolute bottom-0 left-0 w-full h-40
+                bg-gradient-to-b from-transparent to-black z-20" />
+
         </section>
     )
 }

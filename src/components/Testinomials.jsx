@@ -93,6 +93,7 @@ const headingRef = useRef(null);
 
   return (
     <section className="bg-gradient-to-b from-black via-[#633902] to-black py-16 px-4 sm:px-6 lg:px-8">
+      
       <div className="max-w-7xl mx-auto text-center mb-8">
         <h2 
         ref = {headingRef}

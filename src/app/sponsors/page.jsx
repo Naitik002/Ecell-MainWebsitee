@@ -97,12 +97,12 @@ const teamData = [
     "mail": "mailto:niteshkumar.ecell@gmail.com"
   },
   {
-    "imgLink": "./team_images/Manu Parmar.jpg",
-    "personName": "Manu GS Parmar",
-    "personVertical": "Finance Lead",
-    "linkedin": "https://www.linkedin.com/in/manugsparmar/",
-    "insta": "https://www.instagram.com/manuxparmar/",
-    "mail": "mailto:manugsparmar@gmail.com"
+    "imgLink": "./team_images/Ashwin.webp",
+    "personName": "Ashwin Gothwal",
+    "personVertical": "Accounts Lead",
+    "linkedin": "https://www.linkedin.com/in/ashwin-gothwal-a5280a290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/ashwin.6511?igsh=MWpveHBwMWxpZ3prNg==",
+    "mail": "mailto:ashwingothwal428@gmail.com"
   },
   {
     "imgLink": "./team_images/Sannidhya Srivastava.webp",

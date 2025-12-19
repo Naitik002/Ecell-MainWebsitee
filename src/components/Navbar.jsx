@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
 
     <motion.nav
-      className="bg-black text-white shadow-md fixed top-0 w-full z-100 transition-transform duration-300"
+      className="bg-black text-white fixed top-0 w-full z-100 transition-transform duration-300"
       animate={{
         y: showNavbar ? 0 : -135,
       }}
