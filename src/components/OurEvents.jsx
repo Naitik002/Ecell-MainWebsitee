@@ -9,13 +9,16 @@ const EventCard = ({ image, name }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="bg-white rounded-2xl overflow-hidden w-full md:w-[40vw]  shadow-lg border border-gray-700 hover:border-[#fac176] transition-colors duration-300"
+      className="bg-white rounded-2xl overflow-hidden w-full md:w-[280px] shadow-lg border border-gray-700 hover:border-[#fac176] transition-colors duration-300"
     >
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-[40vh] bg-transparent object-contain "
-      />
+      {/* image wrapper: mobile uses fixed viewport height, desktop uses portrait aspect ratio */}
+      <div className="h-[40vh] md:aspect-[3/4] md:h-auto w-full bg-transparent flex items-center justify-center">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-contain p-4"
+        />
+      </div>
       <div className="p-4 text-center bg-black">
         <h3 className="text-lg font-semibold text-[#fac176]">{name}</h3>
       </div>

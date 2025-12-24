@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/Testinomials";
 import Sponsors from "@/components/Sponsors";
 import InfiniteCarousel from "@/components/infiniteCarousal";
 import OurEvents from "@/components/OurEvents";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutUs />
       <Glimpses/>
       <OurEvents/>
+      <Stats/>
       <InfiniteCarousel/>
       <Testimonials/>
       <Sponsors/>

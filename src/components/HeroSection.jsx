@@ -47,7 +47,7 @@ const HeroSection = () => {
           </h3>
 
           <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-wide">
-            Entrepreneurship Cell <br /> NIT-B
+            Entrepreneurship Cell <br /> MANIT Bhopal
           </h1>
 
           <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-xs sm:max-w-sm md:max-w-md">

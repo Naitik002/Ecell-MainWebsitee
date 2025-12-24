@@ -37,7 +37,8 @@ export const AnimatedTestimonials = ({
       className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
-          <div className="relative h-full w-full">
+          <div className="relative h-full w-full flex md:mt-0 mt-7 justify-center md:justify-start">
+
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -68,7 +69,7 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute items-center inset-0 origin-bottom">
+                  className="absolute inset-0 flex items-center md:justify-items-start justify-center origin-bottom">
                   <img
                     src={testimonial.src}
                     alt={testimonial.name}
@@ -81,7 +82,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex flex-col mt-35 md:mt-0 justify-between ">
+        <div className="flex flex-col mt-12 md:mt-0 justify-between ">
           <motion.div
             key={active}
             initial={{
@@ -100,10 +101,12 @@ export const AnimatedTestimonials = ({
               duration: 0.2,
               ease: "easeInOut",
             }}>
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className="text-2xl font-bold text-black dark:text-white text-center md:text-left">
+
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-sm text-gray-500 dark:text-neutral-500 text-center md:text-left">
+
               {testimonials[active].designation}
             </p>
             <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
