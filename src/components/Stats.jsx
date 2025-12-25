@@ -2,10 +2,10 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const stats = [
-  { label: 'Attendee Footfall', value: '30k+'},
-  { label: 'Keynote & Panel Speakers', value: '40+'},
-  { label: 'Investor Participation', value: '100+'},
-  { label: 'Media Collaborations', value: '80+'},
+  { label: 'Startups & Investors', value: '150+'},
+  { label: 'Media Houses', value: '80+'},
+  { label: 'Attendees', value: '30k+'},
+  { label: 'Collaborations with Universities', value: '150+'},
 
 ];
 
