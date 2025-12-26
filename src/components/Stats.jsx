@@ -65,7 +65,7 @@ const Stats = () => {
   const inView = useInView(containerRef, { once: true, amount: 0.18 });
 
   return (
-    <div style={{ padding: 40, backgroundColor: '#f9fafb', borderRadius: 16 }}>
+    <div style={{ padding: 40, backgroundColor: '#f9fafb', borderRadius: 16, maxWidth: 1100, margin: '0 auto' }}>
       <motion.h2
         initial={{ opacity: 0, x: -20 }}
         animate={inView ? { opacity: 1, x: 0 } : {}} // simple entrance tied to inView

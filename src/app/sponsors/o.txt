@@ -1,0 +1,92 @@
+   const sponsors = [
+  // Row 1
+  { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg" },
+  { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg" },
+  { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png" },
+  { name: "SIDBI", logo: "/sponsors/currentSponsor/sidbi.jpg" },
+  { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png" },
+  { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png" },
+  { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif" },
+  { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png" },
+
+  // Row 2
+  { name: "PVR", logo: "/sponsors/currentSponsor/pvr.png" },
+  { name: "Starbucks", logo: "/sponsors/currentSponsor/starbucks.png" },
+  { name: "Wadhwani Foundation", logo: "/sponsors/currentSponsor/wadhwani.jpg" },
+  { name: "Hyundai", logo: "/sponsors/currentSponsor/images (3).jpg" },
+  { name: "Startup News FYI", logo: "/sponsors/currentSponsor/startupnewsfyi.jpeg" },
+  { name: "Utho", logo: "/sponsors/currentSponsor/utho.png" },
+  { name: "Interview Buddy", logo: "/sponsors/currentSponsor/interviewbuddy.svg" },
+  { name: "TiE MP", logo: "/sponsors/currentSponsor/mptie.png" },
+
+  // Row 3
+  { name: "JITO JIIF", logo: "/sponsors/currentSponsor/jito-jiif.webp" },
+  { name: "Impactful Pitch", logo: "/sponsors/currentSponsor/impactfulpitch-logo.png" },
+  { name: "GreenSole", logo: "/sponsors/currentSponsor/greensole.png" },
+  { name: "EaseMyTrip", logo: "/sponsors/currentSponsor/easemytrip.png" },
+  { name: "StartLabs", logo: "/sponsors/currentSponsor/startlabs.png" },
+  { name: "Startup Pholic Catalyst", logo: "/sponsors/currentSponsor/startuppholiccatalyst.jpeg" },
+  { name: "Startup Visors", logo: "/sponsors/currentSponsor/startupvisors.png" },
+  { name: "StockEdge", logo: "/sponsors/currentSponsor/stockedge.png" },
+
+  // Row 4
+  { name: "Westraty", logo: "/sponsors/currentSponsor/westraty.jpeg" },
+  { name: "Purpose", logo: "/sponsors/currentSponsor/purpose.png" },
+  { name: "StockGro", logo: "/sponsors/currentSponsor/stockgro.webp" },
+  { name: "Lawgical Startup", logo: "/sponsors/currentSponsor/lawgical.png" },
+  { name: "CallerDesk", logo: "/sponsors/currentSponsor/callerdesk.svg" },
+  { name: "Feeding Trends", logo: "/sponsors/currentSponsor/feedingtrends.jpeg" },
+  { name: "Education Tree", logo: "/sponsors/currentSponsor/educationtree.png" },
+
+  // Row 5
+  { name: "The Startup Lab", logo: "/sponsors/currentSponsor/startuplab.png" },
+  { name: "TiE Udaipur", logo: "/sponsors/currentSponsor/tieud.png" },
+  { name: "TechStory", logo: "/sponsors/currentSponsor/techstory.jpg" },
+  { name: "The Product Folks", logo: "/sponsors/currentSponsor/powsos.jpg" },
+  { name: "Delhi Angels Den", logo: "/sponsors/currentSponsor/dad.jpeg" },
+  { name: "EnsureKar", logo: "/sponsors/currentSponsor/ensurekar.jpeg" },
+  { name: "KaroStartup", logo: "/sponsors/currentSponsor/karostartup.png" },
+
+  // Row 6
+  { name: "India Accelerator", logo: "/sponsors/currentSponsor/ia.png" },
+  { name: "Instax", logo: "/sponsors/currentSponsor/instax.png" },
+  { name: "La Pinoz Pizza", logo: "/sponsors/currentSponsor/lapino.png" },
+  { name: "AA Gaming", logo: "/sponsors/currentSponsor/aa gaming.jpg" },
+  { name: "Nainaa’s", logo: "/sponsors/currentSponsor/nainaa.png" },
+  { name: "SOS School of Startups", logo: "/sponsors/currentSponsor/sbf.jpg" },
+];
+
+
+
+
+{ src: "/sponsors/adani.png" },
+
+  { src: "/sponsors/hpcl.webp" },
+  { src: "/sponsors/iocl.webp" },
+  { src: "/sponsors/MEITY.webp" },
+  { src: "/sponsors/iim-calcutta.jpg" },
+  { src: "/sponsors/stpi.webp" },
+  { src: "/sponsors/i-am-startup.jpg" },
+  { src: "/sponsors/mpsu.webp" },
+  { src: "/sponsors/aws.webp" },
+  { src: "/sponsors/Canva.webp" },
+  { src: "/sponsors/wolfram_research.webp" },
+
+  { src: "/sponsors/pngegg.webp" },
+
+  { src: "/sponsors/bansal.webp" },
+  { src: "/sponsors/bob.webp" },
+  { src: "/sponsors/redfm.webp" },
+  { src: "/sponsors/jiosaavn-logo-inline.png" },
+  { src: "/sponsors/AIC.png" },
+  { src: "/sponsors/Taskade.webp" },
+
+  // 🇮🇳 Major Indian Startups & Platforms
+  { src: "/sponsors/unstop.webp" },
+  { src: "/sponsors/easymytrip.webp" },
+  { src: "/sponsors/MSG91.webp" },
+  { src: "/sponsors/quillbot.webp" },
+  { src: "/sponsors/PedalStart.webp" },
+  { src: "/sponsors/startupvisor.png" },
+  { src: "/sponsors/bhopal angels.jpeg" },
+  { src: "/sponsors/Expand My Business.webp" },

@@ -1,159 +1,154 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-    {
-      title: "Who We Are",
-      text: "Entrepreneurship Cell NIT Bhopal is a voluntary, student-run organisation that works to create a strong entrepreneurial environment and a vibrant startup culture among the youth community."
-    },
-    {
-      title: "Flagship Event - E-Summit",
-      text: "We host a dynamic array of events under Central India’s largest entrepreneurial fest, E-Summit. These events include Startup Expo, IPL Auction Simulation, Business Plan Competition, Keynote Sessions, Stock Trading Simulation, and more."
-    },
-    {
-      title: "Industry Engagement & Community Network",
-      text: "Our podcast series Pe-Charcha features industry leaders, venture capitalists, alumni founders, and investors. Through these conversations, we share insights that guide and inspire future entrepreneurs."
-    },
-    {
-      title: "Strong Alumni Support",
-      text: "Our strong network of alumni and sponsors helps us expand our reach every year and continue to ignite ambition and make things happen."
-    }
-  ];
+  {
+    title: "Who We Are",
+    text: "Entrepreneurship Cell NIT Bhopal is a voluntary, student-run organisation that works to create a strong entrepreneurial environment and a vibrant startup culture among the youth community.",
+  },
+  {
+    title: "Flagship Event - E-Summit",
+    text: "We host a dynamic array of events under Central India’s largest entrepreneurial fest, E-Summit. These events include Startup Expo, IPL Auction Simulation, Business Plan Competition, Keynote Sessions, Stock Trading Simulation, and more.",
+  },
+  {
+    title: "Industry Engagement & Community Network",
+    text: "Our podcast series Pe-Charcha features industry leaders, venture capitalists, alumni founders, and investors. Through these conversations, we share insights that guide and inspire future entrepreneurs.",
+  },
+  {
+    title: "Strong Alumni Support",
+    text: "Our strong network of alumni and sponsors helps us expand our reach every year and continue to ignite ambition and make things happen.",
+  },
+];
 
 export default function AboutUs() {
-    const containerRef = useRef(null);
-    const leftRef = useRef(null);
-    const rightRef = useRef(null);
+  const sectionRef = useRef(null);
+  const cardsWrapperRef = useRef(null);
 
-    useEffect(() => {
-    const ctx = gsap.context(() => {
-        const cardElements = gsap.utils.toArray(rightRef.current.children);
-        const lastCard = cardElements[cardElements.length - 1];
+  useGSAP(
+  () => {
+    ScrollTrigger.matchMedia({
+      // =======================
+      // DESKTOP / TABLET
+      // =======================
+      "(min-width: 768px)": () => {
+        const cards = gsap.utils.toArray(".about-card");
 
-        // --- HEADING + LINE ENTRANCE (works now) ---
-        const line = leftRef.current.querySelector(".left-line");
-        const title = leftRef.current.querySelector(".left-title");
-
-        gsap.from(line, {
-            scaleY: 0,
-            transformOrigin: "top",
-            duration: 1.5,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top 85%",
-            },
+        gsap.to(cardsWrapperRef.current, {
+          xPercent: -100 * (cards.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: () => `+=${window.innerHeight * cards.length}`,
+            scrub: 1,
+            pin: true,
+            snap: 1 / (cards.length - 1),
+            invalidateOnRefresh: true,
+          },
         });
+      },
 
-        gsap.from(title, {
-            opacity: 0,
-            x: -30,
-            duration: 1,
-            delay: 0.3,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: containerRef.current,
+      // =======================
+      // MOBILE ANIMATIONS
+      // =======================
+      "(max-width: 767px)": () => {
+        const cards = gsap.utils.toArray(".about-card");
+
+        cards.forEach((card) => {
+          gsap.fromTo(
+            card,
+            {
+              opacity: 0,
+              y: 40,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: card,
                 start: "top 80%",
-            },
+                toggleActions: "play none none none",
+              },
+            }
+          );
         });
-
-        // ---- PIN + CARD ANIMATIONS ----
-        ScrollTrigger.matchMedia({
-            "(min-width: 768px)": () => {
-                // Pin the heading
-                ScrollTrigger.create({
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: () => {
-                        const headingHeight = leftRef.current.offsetHeight;
-                        const lastCardTop =
-                            lastCard.getBoundingClientRect().top + window.scrollY;
-                        return lastCardTop - headingHeight;
-                    },
-                    pin: leftRef.current,
-                    pinSpacing: false,
-                    pinType: "transform",
-                });
-
-                // Fade-up animation for cards
-                cardElements.forEach((card) => {
-                    gsap.fromTo(
-                        card,
-                        { opacity: 0, y: 50 },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 90%",
-                                end: "top 60%",
-                                scrub: true,
-                            },
-                        }
-                    );
-                });
-            },
-
-            "(max-width: 767px)": () => {
-                cardElements.forEach((card) => gsap.set(card, { opacity: 1, y: 0 }));
-            },
-        });
-    }, containerRef);
-
-    return () => ctx.revert();
-}, []);
+      },
+    });
+  },
+  { scope: sectionRef }
+);
 
 
+  return (
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen w-full bg-center bg-cover bg-no-repeat "
+      style={{ backgroundImage: "url('/team.jpg')" }}
+    >
 
-    return (
-        <section
-            ref={containerRef}
-            className="relative min-h-screen bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/team.jpg')" }}
+       <div
+  className="
+    pointer-events-none
+    absolute inset-0 z-10
+    bg-gradient-to-b
+    from-black
+    via-black/70
+    to-black
+  "
+/>
+      {/* FIXED HEADING */}
+      <div className="relative z-20 px-6 md:px-24 pt-24 pb-10 md:pb-3">
+        <div className="flex items-start md:items-center mt-10">
+          <div className="w-1 bg-[#FAC176] h-24 md:h-50 mr-6 "></div>
+          <h2 className="text-4xl md:text-8xl font-extrabold leading-tight bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent uppercase tracking-tighter">
+            What is <br /> E-Cell?
+          </h2>
+        </div>
+      </div>
+
+      {/* CARDS */}
+      <div className="relative z-20 overflow-hidden">
+        <div
+          ref={cardsWrapperRef}
+          className="
+            flex flex-col md:flex-row
+            md:items-center
+            md:h-[60vh]
+          "
         >
-            {/* Fade overlay that blends the background (TOP → CENTER → BOTTOM) */}
-            <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-b from-black via-black/70 to-black"></div>
-
-            {/* CONTENT */}
-            <div className="relative z-50 max-w-6xl mx-auto flex flex-col md:flex-row justify-between px-6 md:px-20 py-10 md:py-24 gap-5 md:gap-10">
-
-                {/* LEFT HEADING — PINNED */}
-                <div className="md:w-1/3 flex flex-col">
-                    <div ref={leftRef} className="flex items-start mb-8 md:mb-0">
-
-                        <div className="left-line w-1 bg-[#FAC176] mt-4 mr-4 h-16 md:h-full"></div>
-
-                        <h2 className="left-title text-4xl md:text-6xl mt-4 font-extrabold leading-tight bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
-                            What is E-Cell?
-                        </h2>
-
-                    </div>
-                </div>
-
-
-                {/* RIGHT CARDS */}
-                <div
-                    ref={rightRef}
-                    className="md:w-2/3 flex flex-col items-center md:items-start gap-8"
-                >
-                    {cards.map((card, index) => (
-                        <div
-                            key={index}
-                            className="p-6 rounded-xl   w-full md:w-[80%]"
-                        >
-                            <h3 className="text-lg md:text-3xl font-bold mb-2 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
-                                {card.title}
-                            </h3>
-                            <p className="text-white text-md md:text-xl">{card.text}</p>
-                        </div>
-                    ))}
-                </div>
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="
+                about-card
+                flex-shrink-0
+                w-full md:w-screen
+                px-6 md:px-24
+                py-12
+              "
+            >
+              <div className="max-w-xl">
+                <h3 className="text-2xl md:text-4xl font-bold mb-4 bg-clip-text bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent">
+                  {card.title}
+                </h3>
+                <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
+                  {card.text}
+                </p>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40
+                bg-gradient-to-b from-transparent to-black z-20" />
+    </section>
+  );
 }

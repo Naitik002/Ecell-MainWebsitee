@@ -5,23 +5,18 @@ import gsap from 'gsap'
 
 export default function SponsorsCarousel() {
     const speakers = [
-        { src: "/sponsors/adani.png" },
+        { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg" },
+  { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg" },
+  { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png" },
+  { name: "SIDBI", logo: "/sponsors/currentSponsor/sidbi.jpg" },
+  { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png" },
+  { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png" },
+  { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif" },
+  { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png" },
+  { logo: "/sponsors/adani.png" },
 
-        { src: "/sponsors/hpcl.webp" },
-        { src: "/sponsors/iocl.webp" },
-        { src: "/sponsors/MEITY.webp" },
-        { src: "/sponsors/iim-calcutta.jpg" },
-        { src: "/sponsors/stpi.webp" },
-        { src: "/sponsors/i-am-startup.jpg" },
-        { src: "/sponsors/mpsu.webp" },
-        { src: "/sponsors/aws.webp" },
-        { src: "/sponsors/Canva.webp" },
-        { src: "/sponsors/wolfram_research.webp" },
-
-        { src: "/sponsors/pngegg.webp" },
-
-        { src: "/sponsors/bansal.webp" },
-        { src: "/sponsors/bob.webp" },
+  { logo: "/sponsors/hpcl.webp" },
+  { logo: "/sponsors/iocl.webp" },
     ];
 
     const trackRef = useRef(null)
@@ -35,7 +30,7 @@ export default function SponsorsCarousel() {
 
         tweenRef.current = gsap.to(track, {
             x: -width,
-            duration: 100,
+            duration: 20,
             ease: 'none',
             repeat: -1
         })
@@ -79,7 +74,7 @@ export default function SponsorsCarousel() {
                                         {/* IMAGE */}
                                         <div className="w-50 h-50 rounded-xl overflow-hidden border border-[#fac176]/30">
                                             <img
-                                                src={spon.src}
+                                                src={spon.logo}
                                                 alt={`sponsor-${i}`}
                                                 className="w-full h-full object-contain transition duration-300"
                                             />

@@ -116,9 +116,65 @@ const teamData = [
 
 export default function SponsorUs() {
 
-   const sponsors = [
-  // 🇮🇳 Government, PSU & National Institutions
+  const sponsors = [
+  // Row 1
+  { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg" },
+  { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg" },
+  { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png" },
+  { name: "SIDBI", logo: "/sponsors/currentSponsor/sidbi.jpg" },
+  { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png" },
+  { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png" },
+  { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif" },
+  { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png" },
 
+  // Row 2
+  { name: "PVR", logo: "/sponsors/currentSponsor/pvr.png" },
+  { name: "Starbucks", logo: "/sponsors/currentSponsor/starbucks.png" },
+  { name: "Wadhwani Foundation", logo: "/sponsors/currentSponsor/wadhwani.jpg" },
+  { name: "Hyundai", logo: "/sponsors/currentSponsor/images (3).jpg" },
+  { name: "Startup News FYI", logo: "/sponsors/currentSponsor/startupnewsfyi.jpeg" },
+  { name: "Utho", logo: "/sponsors/currentSponsor/utho.png" },
+  { name: "Interview Buddy", logo: "/sponsors/currentSponsor/interviewbuddy.svg" },
+  { name: "TiE MP", logo: "/sponsors/currentSponsor/mptie.png" },
+
+  // Row 3
+  { name: "JITO JIIF", logo: "/sponsors/currentSponsor/jito-jiif.webp" },
+  { name: "Impactful Pitch", logo: "/sponsors/currentSponsor/impactfulpitch-logo.png" },
+  { name: "GreenSole", logo: "/sponsors/currentSponsor/greensole.png" },
+  { name: "EaseMyTrip", logo: "/sponsors/currentSponsor/easemytrip.png" },
+  { name: "StartLabs", logo: "/sponsors/currentSponsor/startlabs.png" },
+  { name: "Startup Pholic Catalyst", logo: "/sponsors/currentSponsor/startuppholiccatalyst.jpeg" },
+  { name: "Startup Visors", logo: "/sponsors/currentSponsor/startupvisors.png" },
+  { name: "StockEdge", logo: "/sponsors/currentSponsor/stockedge.png" },
+
+  // Row 4
+  { name: "Westraty", logo: "/sponsors/currentSponsor/westraty.jpeg" },
+  { name: "Purpose", logo: "/sponsors/currentSponsor/purpose.png" },
+  { name: "StockGro", logo: "/sponsors/currentSponsor/stockgro.webp" },
+  { name: "Lawgical Startup", logo: "/sponsors/currentSponsor/lawgical.png" },
+  { name: "CallerDesk", logo: "/sponsors/currentSponsor/callerdesk.svg" },
+  { name: "Feeding Trends", logo: "/sponsors/currentSponsor/feedingtrends.jpeg" },
+  { name: "Education Tree", logo: "/sponsors/currentSponsor/educationtree.png" },
+
+  // Row 5
+  { name: "The Startup Lab", logo: "/sponsors/currentSponsor/startuplab.png" },
+  { name: "TiE Udaipur", logo: "/sponsors/currentSponsor/tieud.png" },
+  { name: "TechStory", logo: "/sponsors/currentSponsor/techstory.jpg" },
+  { name: "The Product Folks", logo: "/sponsors/currentSponsor/powsos.jpg" },
+  { name: "Delhi Angels Den", logo: "/sponsors/currentSponsor/dad.jpeg" },
+  { name: "EnsureKar", logo: "/sponsors/currentSponsor/ensurekar.jpeg" },
+  { name: "KaroStartup", logo: "/sponsors/currentSponsor/karostartup.png" },
+
+  // Row 6
+  { name: "India Accelerator", logo: "/sponsors/currentSponsor/ia.png" },
+  { name: "Instax", logo: "/sponsors/currentSponsor/instax.png" },
+  { name: "La Pinoz Pizza", logo: "/sponsors/currentSponsor/lapino.png" },
+  { name: "AA Gaming", logo: "/sponsors/currentSponsor/aa gaming.jpg" },
+  { name: "Nainaa’s", logo: "/sponsors/currentSponsor/nainaa.png" },
+  { name: "SOS School of Startups", logo: "/sponsors/currentSponsor/sbf.jpg" },
+];
+
+const pastSponsors = [
   { src: "/sponsors/adani.png" },
 
   { src: "/sponsors/hpcl.webp" },
@@ -150,54 +206,11 @@ export default function SponsorUs() {
   { src: "/sponsors/startupvisor.png" },
   { src: "/sponsors/bhopal angels.jpeg" },
   { src: "/sponsors/Expand My Business.webp" },
-
-  // 🇮🇳 Indian Media, Communities & EdTech
-  { src: "/sponsors/ApnaCast.webp" },
-  { src: "/sponsors/techstory.webp" },
-  { src: "/sponsors/Learning While Traveling.webp" },
-  { src: "/sponsors/teachnook.webp" },
-  { src: "/sponsors/kitab lovers.png" },
-  { src: "/sponsors/stock wealth academy.webp" },
-  { src: "/sponsors/offistore.jpg" },
-
-  // 🌍 Global Brands (after Indian priority)
-  
-
-  // 🚀 Ecosystem, Tools & Supporting Partners
-  
-  { src: "/sponsors/Boudhik-IP-Logo.png" },
-  { src: "/sponsors/coolberg.webp" },
-  { src: "/sponsors/3ways.webp" },
-  { src: "/sponsors/bv.webp" },
-  { src: "/sponsors/coinpage.png" },
-  { src: "/sponsors/crow.png" },
-  { src: "/sponsors/crowdera.webp" },
-  { src: "/sponsors/forethought.webp" },
-  { src: "/sponsors/freashworks.webp" },
-  { src: "/sponsors/ftlt.webp" },
-  { src: "/sponsors/givemycertificate.png" },
-  { src: "/sponsors/goodworks_cowork_logo.webp" },
-  { src: "/sponsors/inovative script.webp" },
-  { src: "/sponsors/mansarovar.webp" },
-  { src: "/sponsors/pan macmillan.webp" },
-  { src: "/sponsors/paper.jpeg" },
-  { src: "/sponsors/raphe-mphibr.png" },
-  { src: "/sponsors/recklabs_logo.webp" },
-  { src: "/sponsors/roostoo.webp" },
-  { src: "/sponsors/rupeezy_icon.svg" },
-  { src: "/sponsors/sf.webp" },
-  { src: "/sponsors/shekunj.svg" },
-  { src: "/sponsors/sixthsenselogo.webp" },
-  { src: "/sponsors/starworks_prime_logo.webp" },
-  { src: "/sponsors/wadhwani-foundation.jpg" },
 ];
 
+  
 
-  const moreSponsors = Array.from({ length: 32 }, (_, i) =>
-    i === 15 || i == 3 || i == 5 || i == 12 ? null : { src: `/sponsors/moreSponsors/Asset ${i + 5}.webp` }
-  ).filter(Boolean);
-
-  const allSponsors = [...sponsors, ...moreSponsors];
+  const allSponsors = [...sponsors];
 
   const testimonials = [
     {
@@ -717,11 +730,47 @@ export default function SponsorUs() {
           initial="hidden"
           whileInView="visible"
         >
-          Our Past Sponsors
+          Our Sponsors
         </motion.h2>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
         {sponsorsToShow.map((sponsor, idx) => (
-          <div key={idx} className="w-40 h-27 md:w-60 md:h-40 flex items-center justify-center p-4 bg-white rounded-lg">
+          <div key={idx} className="w-40 h-27 md:w-40 md:h-30 flex items-center justify-center p-4 bg-white rounded-lg">
+            <img
+              src={sponsor.logo}
+              alt="Sponsor logo"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+        ))}
+
+      </div>
+
+      {/* View More button only for mobile */}
+      {isMobile && !showAll && sponsors.length > mobileLimit && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(true)}
+            className="px-6 py-2 rounded-md bg-[#FAC176] text-black font-semibold hover:bg-yellow-500 transition"
+          >
+            View More
+          </button>
+        </div>
+      )}
+
+      </section>
+
+      <section id='allSponsors' className="py-20 mt-20 bg-black md:px-16">
+        <motion.h2
+          className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent bg-clip-text mb-16 text-center"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+        >
+          Our Past Sponsors
+        </motion.h2>
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
+        {pastSponsors.map((sponsor, idx) => (
+          <div key={idx} className="w-40 h-27 md:w-40 md:h-30 flex items-center justify-center p-4 bg-white rounded-lg">
             <img
               src={sponsor.src}
               alt="Sponsor logo"
