@@ -8,6 +8,25 @@ import { useRouter } from "next/navigation";
 import SponsorsCarousel from "./SponsorsCarousal";
 
 export default function Sponsors() {
+  const spn1 = [
+    { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg", website: "https://www.sail.co.in" },
+    { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg", website: "https://aicrntu.com" },
+    { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png", website: "https://raphemphibr.com" },
+    { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png", website: "https://unstop.com" },
+    { logo: "/sponsors/adani.png", website: "https://www.adani.com" },
+    { logo: "/sponsors/hpcl.webp", website: "https://www.hindustanpetroleum.com" },
+    { logo: "/sponsors/iocl.webp", website: "https://iocl.com" },
+  ];
+
+  const spn2 = [
+    { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png", website: "https://bnest.in" },
+    { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png", website: "https://ekspe.com" },
+    { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif", website: "https://www.trends.ajio.com" },
+    { name: "PVR", logo: "/sponsors/currentSponsor/pvr.png", website: "https://www.pvrcinemas.com" },
+    { name: "Starbucks", logo: "/sponsors/currentSponsor/starbucks.png", website: "https://www.starbucks.in" },
+    { name: "Wadhwani Foundation", logo: "/sponsors/currentSponsor/wadhwani.jpg", website: "https://wadhwanifoundation.org" },
+    { name: "Hyundai", logo: "/sponsors/currentSponsor/images (3).jpg", website: "https://www.hyundai.com/in" },
+  ];
 
   const router = useRouter();
 
@@ -44,15 +63,6 @@ export default function Sponsors() {
 
   const mobileLimit = 8; // 2 per row, 4 rows
 
-  const sponsors = [
-  // 🇮🇳 Government, PSU & National Institutions
-
-  { src: "/sponsors/adani.png" },
-
-  { src: "/sponsors/hpcl.webp" },
-  { src: "/sponsors/iocl.webp" },
-  { src: "/sponsors/MEITY.webp" },
-  ];
 
 
   return (
@@ -63,7 +73,7 @@ export default function Sponsors() {
         Our Sponsors
       </h2>
 
-       {/* <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
+      {/* <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
         {sponsors.map((sponsor, idx) => (
           <div key={idx} className="w-40 h-27 md:w-60 md:h-40 flex items-center justify-center p-4 bg-white rounded-lg">
             <img
@@ -76,19 +86,20 @@ export default function Sponsors() {
 
       </div> */}
 
-      <SponsorsCarousel/>
+      <SponsorsCarousel data={spn1} />
+      <SponsorsCarousel data={spn2} direction="right" />
 
       {/* View More button only for mobile */}
-      
-        <div className="flex justify-center mt-2">
-          <button
-            onClick={() => router.push("/sponsors#allSponsors")}
-            className="px-6 py-2 rounded-md cursor-pointer bg-[#FAC176] text-black font-semibold hover:bg-[#f8b762] transition"
-          >
-            View All
-          </button>
-        </div>
-      
+
+      <div className="flex justify-center mt-2">
+        <button
+          onClick={() => router.push("/sponsors#allSponsors")}
+          className="px-6 py-2 rounded-md cursor-pointer bg-[#FAC176] text-black font-semibold hover:bg-[#f8b762] transition"
+        >
+          View All
+        </button>
+      </div>
+
     </section>
   );
 }

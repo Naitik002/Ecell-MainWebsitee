@@ -3,21 +3,8 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
-export default function SponsorsCarousel() {
-    const speakers = [
-        { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg" },
-  { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg" },
-  { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png" },
-  { name: "SIDBI", logo: "/sponsors/currentSponsor/sidbi.jpg" },
-  { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png" },
-  { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png" },
-  { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif" },
-  { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png" },
-  { logo: "/sponsors/adani.png" },
+export default function SponsorsCarousel({ data, direction = 'left' }) {
 
-  { logo: "/sponsors/hpcl.webp" },
-  { logo: "/sponsors/iocl.webp" },
-    ];
 
     const trackRef = useRef(null)
     const tweenRef = useRef(null)
@@ -27,16 +14,30 @@ export default function SponsorsCarousel() {
         if (!track) return
 
         const width = track.scrollWidth / 2
+        const dir = direction === "left" ? -1 : 1
+
+        gsap.set(track, { x: 0 })
+        tweenRef.current?.kill()
 
         tweenRef.current = gsap.to(track, {
-            x: -width,
-            duration: 20,
-            ease: 'none',
-            repeat: -1
+            x: dir * -width,
+            duration: 35,
+            ease: "none",
+            repeat: -1,
+            modifiers: {
+                x: (x) => {
+                    const wrapped = gsap.utils.wrap(-width, 0)(parseFloat(x))
+                    return `${wrapped}px`
+                }
+            }
         })
 
         return () => tweenRef.current?.kill()
-    }, [])
+    }, [direction])
+
+
+
+
 
     const move = (dir) => {
         tweenRef.current?.pause()
@@ -58,31 +59,34 @@ export default function SponsorsCarousel() {
                     onMouseEnter={() => tweenRef.current?.pause()}
                     onMouseLeave={() => tweenRef.current?.play()}
                 >
-                    
+
                     {/* TRACK */}
                     <div ref={trackRef} className="flex gap-6 w-max h-100vh">
-                        {[...speakers, ...speakers].map((spon, i) => (
-                            <div key={i} className='py-2'>
-                                <div
-                                    key={i}
-                                    className="shrink-0 rounded-2xl border border-[#fac176] bg-white 
+                        {[...data, ...data].map((spon, i) => (
+                            <a key={i} href={spon.website} target="_blank" rel="noopener noreferrer">
+                                <div className='py-2'>
+                                    <div
+                                        key={i}
+                                        className="shrink-0 rounded-2xl border border-[#fac176] bg-white 
              transition-all duration-300 hover:scale-[1.03]
              hover:shadow-[0_0_30px_rgba(250,193,118,0.25)]"
-                                >
-                                    <div className="flex flex-col items-center text-center gap-4">
+                                    >
+                                        <div className="flex flex-col items-center text-center gap-4">
 
-                                        {/* IMAGE */}
-                                        <div className="w-50 h-50 rounded-xl overflow-hidden border border-[#fac176]/30">
-                                            <img
-                                                src={spon.logo}
-                                                alt={`sponsor-${i}`}
-                                                className="w-full h-full object-contain transition duration-300"
-                                            />
+                                            {/* IMAGE */}
+                                            <div className="w-50 h-50 rounded-xl overflow-hidden border border-[#fac176]/30">
+                                                <img
+                                                    src={spon.logo}
+                                                    alt={`sponsor-${i}`}
+                                                    className="w-full h-full object-contain transition duration-300"
+                                                />
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
-                            </div>
+
+                            </a>
 
 
                         ))}
@@ -90,7 +94,7 @@ export default function SponsorsCarousel() {
                 </div>
 
                 {/* CONTROLS */}
-                <div className="flex justify-start gap-4 mt-10">
+                {/* <div className="flex justify-start gap-4 mt-10">
                     <button
                         onClick={() => move('prev')}
                         className="group/button flex h-10 w-10 items-center justify-center
@@ -123,7 +127,7 @@ export default function SponsorsCarousel() {
                         </span>
                     </button>
 
-                </div>
+                </div> */}
             </div>
         </section>
     )

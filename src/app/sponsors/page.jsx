@@ -117,100 +117,95 @@ const teamData = [
 export default function SponsorUs() {
 
   const sponsors = [
-  // Row 1
-  { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg" },
-  { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg" },
-  { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png" },
-  { name: "SIDBI", logo: "/sponsors/currentSponsor/sidbi.jpg" },
-  { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png" },
-  { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png" },
-  { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif" },
-  { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png" },
 
-  // Row 2
-  { name: "PVR", logo: "/sponsors/currentSponsor/pvr.png" },
-  { name: "Starbucks", logo: "/sponsors/currentSponsor/starbucks.png" },
-  { name: "Wadhwani Foundation", logo: "/sponsors/currentSponsor/wadhwani.jpg" },
-  { name: "Hyundai", logo: "/sponsors/currentSponsor/images (3).jpg" },
-  { name: "Startup News FYI", logo: "/sponsors/currentSponsor/startupnewsfyi.jpeg" },
-  { name: "Utho", logo: "/sponsors/currentSponsor/utho.png" },
-  { name: "Interview Buddy", logo: "/sponsors/currentSponsor/interviewbuddy.svg" },
-  { name: "TiE MP", logo: "/sponsors/currentSponsor/mptie.png" },
+    // Row 1
+    { name: "SAIL", logo: "./sponsors/currentSponsor/Sail_logo.jpg", website: "https://www.sail.co.in" },
+    { name: "AIC RNTU", logo: "/sponsors/currentSponsor/AICRNTU.jpeg", website: "https://aicrntu.com" },
+    { name: "Raphe mPhibr", logo: "/sponsors/currentSponsor/raphe-mphibr.png", website: "https://raphemphibr.com" },
+    { name: "SIDBI", logo: "/sponsors/currentSponsor/sidbi.jpg", website: "https://www.sidbi.in" },
+    { name: "BNest", logo: "/sponsors/currentSponsor/bnest.png", website: "https://bnest.in" },
+    { name: "EKSPE", logo: "/sponsors/currentSponsor/ekspe.png", website: "https://ekspe.com" },
+    { name: "Trends", logo: "/sponsors/currentSponsor/reliance.avif", website: "https://www.trends.ajio.com" },
+    { name: "Unstop", logo: "/sponsors/currentSponsor/unstop.png", website: "https://unstop.com" },
 
-  // Row 3
-  { name: "JITO JIIF", logo: "/sponsors/currentSponsor/jito-jiif.webp" },
-  { name: "Impactful Pitch", logo: "/sponsors/currentSponsor/impactfulpitch-logo.png" },
-  { name: "GreenSole", logo: "/sponsors/currentSponsor/greensole.png" },
-  { name: "EaseMyTrip", logo: "/sponsors/currentSponsor/easemytrip.png" },
-  { name: "StartLabs", logo: "/sponsors/currentSponsor/startlabs.png" },
-  { name: "Startup Pholic Catalyst", logo: "/sponsors/currentSponsor/startuppholiccatalyst.jpeg" },
-  { name: "Startup Visors", logo: "/sponsors/currentSponsor/startupvisors.png" },
-  { name: "StockEdge", logo: "/sponsors/currentSponsor/stockedge.png" },
+    // Row 2
+    { name: "PVR", logo: "/sponsors/currentSponsor/pvr.png", website: "https://www.pvrcinemas.com" },
+    { name: "Starbucks", logo: "/sponsors/currentSponsor/starbucks.png", website: "https://www.starbucks.in" },
+    { name: "Wadhwani Foundation", logo: "/sponsors/currentSponsor/wadhwani.jpg", website: "https://wadhwanifoundation.org" },
+    { name: "Hyundai", logo: "/sponsors/currentSponsor/images (3).jpg", website: "https://www.hyundai.com/in" },
+    { name: "Startup News FYI", logo: "/sponsors/currentSponsor/startupnewsfyi.jpeg", website: "https://startupnews.fyi" },
+    { name: "Utho", logo: "/sponsors/currentSponsor/utho.png", website: "https://utho.com" },
+    { name: "Interview Buddy", logo: "/sponsors/currentSponsor/interviewbuddy.svg", website: "https://interviewbuddy.in" },
+    { name: "TiE MP", logo: "/sponsors/currentSponsor/mptie.png", website: "https://tiemp.org" },
 
-  // Row 4
-  { name: "Westraty", logo: "/sponsors/currentSponsor/westraty.jpeg" },
-  { name: "Purpose", logo: "/sponsors/currentSponsor/purpose.png" },
-  { name: "StockGro", logo: "/sponsors/currentSponsor/stockgro.webp" },
-  { name: "Lawgical Startup", logo: "/sponsors/currentSponsor/lawgical.png" },
-  { name: "CallerDesk", logo: "/sponsors/currentSponsor/callerdesk.svg" },
-  { name: "Feeding Trends", logo: "/sponsors/currentSponsor/feedingtrends.jpeg" },
-  { name: "Education Tree", logo: "/sponsors/currentSponsor/educationtree.png" },
+    // Row 3
+    { name: "JITO JIIF", logo: "/sponsors/currentSponsor/jito-jiif.webp", website: "https://jiif.co.in" },
+    { name: "Impactful Pitch", logo: "/sponsors/currentSponsor/impactfulpitch-logo.png", website: "https://impactfulpitch.com" },
+    { name: "GreenSole", logo: "/sponsors/currentSponsor/greensole.png", website: "https://greensole.com" },
+    { name: "EaseMyTrip", logo: "/sponsors/currentSponsor/easemytrip.png", website: "https://www.easemytrip.com" },
+    { name: "StartLabs", logo: "/sponsors/currentSponsor/startlabs.png", website: "https://startlabs.co" },
+    { name: "Startup Pholic Catalyst", logo: "/sponsors/currentSponsor/startuppholiccatalyst.jpeg", website: "https://startuppholic.com" },
+    { name: "Startup Visors", logo: "/sponsors/currentSponsor/startupvisors.png", website: "https://startupvisors.com" },
+    { name: "StockEdge", logo: "/sponsors/currentSponsor/stockedge.png", website: "https://stockedge.com" },
 
-  // Row 5
-  { name: "The Startup Lab", logo: "/sponsors/currentSponsor/startuplab.png" },
-  { name: "TiE Udaipur", logo: "/sponsors/currentSponsor/tieud.png" },
-  { name: "TechStory", logo: "/sponsors/currentSponsor/techstory.jpg" },
-  { name: "The Product Folks", logo: "/sponsors/currentSponsor/powsos.jpg" },
-  { name: "Delhi Angels Den", logo: "/sponsors/currentSponsor/dad.jpeg" },
-  { name: "EnsureKar", logo: "/sponsors/currentSponsor/ensurekar.jpeg" },
-  { name: "KaroStartup", logo: "/sponsors/currentSponsor/karostartup.png" },
+    // Row 4
+    { name: "Westraty", logo: "/sponsors/currentSponsor/westraty.jpeg", website: "https://westraty.com" },
+    { name: "Purpose", logo: "/sponsors/currentSponsor/purpose.png", website: "https://purposeinc.org" },
+    { name: "StockGro", logo: "/sponsors/currentSponsor/stockgro.webp", website: "https://stockgro.club" },
+    { name: "Lawgical Startup", logo: "/sponsors/currentSponsor/lawgical.png", website: "https://lawgicalstartup.com" },
+    { name: "CallerDesk", logo: "/sponsors/currentSponsor/callerdesk.svg", website: "https://callerdesk.io" },
+    { name: "Feeding Trends", logo: "/sponsors/currentSponsor/feedingtrends.jpeg", website: "https://feedingtrends.com" },
+    { name: "Education Tree", logo: "/sponsors/currentSponsor/educationtree.png", website: "https://educationtreeglobal.com" },
 
-  // Row 6
-  { name: "India Accelerator", logo: "/sponsors/currentSponsor/ia.png" },
-  { name: "Instax", logo: "/sponsors/currentSponsor/instax.png" },
-  { name: "La Pinoz Pizza", logo: "/sponsors/currentSponsor/lapino.png" },
-  { name: "AA Gaming", logo: "/sponsors/currentSponsor/aa gaming.jpg" },
-  { name: "Nainaa’s", logo: "/sponsors/currentSponsor/nainaa.png" },
-  { name: "SOS School of Startups", logo: "/sponsors/currentSponsor/sbf.jpg" },
-];
+    // Row 5
+    { name: "The Startup Lab", logo: "/sponsors/currentSponsor/startuplab.png", website: "https://thestartuplab.in" },
+    { name: "TiE Udaipur", logo: "/sponsors/currentSponsor/tieud.png", website: "https://tieudaipur.org" },
+    { name: "TechStory", logo: "/sponsors/currentSponsor/techstory.jpg", website: "https://techstory.in" },
+    { name: "The Product Folks", logo: "/sponsors/currentSponsor/powsos.jpg", website: "https://theproductfolks.com" },
+    { name: "Delhi Angels Den", logo: "/sponsors/currentSponsor/dad.jpeg", website: "https://www.delhiangels.org" },
+    { name: "EnsureKar", logo: "/sponsors/currentSponsor/ensurekar.jpeg", website: "https://ensurekar.com" },
+    { name: "KaroStartup", logo: "/sponsors/currentSponsor/karostartup.png", website: "https://karostartup.com" },
 
-const pastSponsors = [
-  { src: "/sponsors/adani.png" },
+    // Row 6
+    { name: "India Accelerator", logo: "/sponsors/currentSponsor/ia.png", website: "https://indiaaccelerator.co" },
+    { name: "Instax", logo: "/sponsors/currentSponsor/instax.png", website: "https://www.instax.in" },
+    { name: "La Pinoz Pizza", logo: "/sponsors/currentSponsor/lapino.png", website: "https://lapinozpizza.in" },
+    { name: "AA Gaming", logo: "/sponsors/currentSponsor/aa gaming.jpg", website: "https://aagaming.in" },
+    { name: "Nainaa’s", logo: "/sponsors/currentSponsor/nainaa.png", website: "https://nainaas.com" },
+    { name: "SOS School of Startups", logo: "/sponsors/currentSponsor/sbf.jpg", website: "https://schoolofstartups.in" },
+  ]
 
-  { src: "/sponsors/hpcl.webp" },
-  { src: "/sponsors/iocl.webp" },
-  { src: "/sponsors/MEITY.webp" },
-  { src: "/sponsors/iim-calcutta.jpg" },
-  { src: "/sponsors/stpi.webp" },
-  { src: "/sponsors/i-am-startup.jpg" },
-  { src: "/sponsors/mpsu.webp" },
-  { src: "/sponsors/aws.webp" },
-  { src: "/sponsors/Canva.webp" },
-  { src: "/sponsors/wolfram_research.webp" },
+  const pastSponsors = [
+    { src: "/sponsors/adani.png", website: "https://www.adani.com" },
+    { src: "/sponsors/hpcl.webp", website: "https://www.hindustanpetroleum.com" },
+    { src: "/sponsors/iocl.webp", website: "https://iocl.com" },
+    { src: "/sponsors/MEITY.webp", website: "https://www.meity.gov.in" },
+    { src: "/sponsors/iim-calcutta.jpg", website: "https://www.iimcal.ac.in" },
+    { src: "/sponsors/stpi.webp", website: "https://www.stpi.in" },
+    { src: "/sponsors/i-am-startup.jpg", website: "https://www.startupindia.gov.in" },
+    { src: "/sponsors/mpsu.webp", website: "https://mp.gov.in" },
+    { src: "/sponsors/aws.webp", website: "https://aws.amazon.com" },
+    { src: "/sponsors/Canva.webp", website: "https://www.canva.com" },
+    { src: "/sponsors/wolfram_research.webp", website: "https://www.wolfram.com" },
+    { src: "/sponsors/pngegg.webp", website: "https://www.pngegg.com" },
+    { src: "/sponsors/bansal.webp", website: "https://bansalgroup.in" },
+    { src: "/sponsors/bob.webp", website: "https://www.bankofbaroda.in" },
+    { src: "/sponsors/redfm.webp", website: "https://www.redfmindia.in" },
+    { src: "/sponsors/jiosaavn-logo-inline.png", website: "https://www.jiosaavn.com" },
+    { src: "/sponsors/AIC.png", website: "https://aim.gov.in" },
+    { src: "/sponsors/Taskade.webp", website: "https://www.taskade.com" },
+    { src: "/sponsors/unstop.webp", website: "https://unstop.com" },
+    { src: "/sponsors/easymytrip.webp", website: "https://www.easemytrip.com" },
+    { src: "/sponsors/MSG91.webp", website: "https://msg91.com" },
+    { src: "/sponsors/quillbot.webp", website: "https://quillbot.com" },
+    { src: "/sponsors/PedalStart.webp", website: "https://pedalstart.com" },
+    { src: "/sponsors/startupvisor.png", website: "https://startupvisors.com" },
+    { src: "/sponsors/bhopal angels.jpeg", website: "https://bhopalangels.com" },
+    { src: "/sponsors/Expand My Business.webp", website: "https://expandmybusiness.com" },
+  ]
 
-  { src: "/sponsors/pngegg.webp" },
-
-  { src: "/sponsors/bansal.webp" },
-  { src: "/sponsors/bob.webp" },
-  { src: "/sponsors/redfm.webp" },
-  { src: "/sponsors/jiosaavn-logo-inline.png" },
-  { src: "/sponsors/AIC.png" },
-  { src: "/sponsors/Taskade.webp" },
-
-  // 🇮🇳 Major Indian Startups & Platforms
-  { src: "/sponsors/unstop.webp" },
-  { src: "/sponsors/easymytrip.webp" },
-  { src: "/sponsors/MSG91.webp" },
-  { src: "/sponsors/quillbot.webp" },
-  { src: "/sponsors/PedalStart.webp" },
-  { src: "/sponsors/startupvisor.png" },
-  { src: "/sponsors/bhopal angels.jpeg" },
-  { src: "/sponsors/Expand My Business.webp" },
-];
-
-  
-
-  const allSponsors = [...sponsors];
+  const allSponsors1 = [...sponsors];
+  const allSponsors2 = [...pastSponsors];
 
   const testimonials = [
     {
@@ -280,19 +275,21 @@ const pastSponsors = [
       setLoading(false);
     }
   };
-  const [showAll, setShowAll] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
-  
-    // Detect mobile screen
-    useEffect(() => {
-      const handleResize = () => setIsMobile(window.innerWidth < 768);
-      handleResize(); // initial check
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  
-    const mobileLimit = 8; // 2 per row, 4 rows
-    const sponsorsToShow = isMobile && !showAll ? allSponsors.slice(0, mobileLimit) : allSponsors;
+  const [showAll1, setShowAll1] = useState(false);
+  const [showAll2, setShowAll2] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const mobileLimit = 8; // 2 per row, 4 rows
+  const sponsorsToShow1 = isMobile && !showAll1 ? allSponsors1.slice(0, mobileLimit) : allSponsors1;
+  const sponsorsToShow2 = isMobile && !showAll2 ? allSponsors2.slice(0, mobileLimit) : allSponsors2;
 
   return (
     <main className="bg-black text-white overflow-x-hidden">
@@ -307,7 +304,7 @@ const pastSponsors = [
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        
+
       >
         <div className="absolute inset-0 bg-black/80 z-0"></div>
         <motion.h1
@@ -395,50 +392,50 @@ const pastSponsors = [
           How we helped our past sponsors
         </motion.h2>
         <motion.div
-  className="max-w-6xl mx-auto px-4"
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
->
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    
-    {/* Card 1 */}
-    <motion.div
-      className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8 text-white shadow-lg"
-      whileHover={{ y: -6 }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
-    >
-      <h3 className="text-2xl font-semibold mb-4 text-[#fac176]">
-        Strengthening Partnerships Through Growth
-      </h3>
+          className="max-w-6xl mx-auto px-4"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-      <p className="text-white/85 leading-relaxed">
-        Entrepreneurship Cell NIT Bhopal has been organising large-scale events that attract huge audiences as well as committed sponsors and over the years has grown from a small community of innovators into the host of Central India’s largest entrepreneurial fest, now striving to elevate our initiatives toward national-level recognition and impact.
-        <br /><br />
-        Aligned with our vision to build a strong entrepreneurial environment among the youth, we work to create a mutually beneficial platform where both rising startups and established enterprises thrive. Through this collaboration, our sponsors gain access to an ever-expanding audience along with diverse networking opportunities that broaden their reach and influence.
-      </p>
-    </motion.div>
+            {/* Card 1 */}
+            <motion.div
+              className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8 text-white shadow-lg"
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-[#fac176]">
+                Strengthening Partnerships Through Growth
+              </h3>
 
-    {/* Card 2 */}
-    <motion.div
-      className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8 text-white shadow-lg"
-      whileHover={{ y: -6 }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
-    >
-      <h3 className="text-2xl font-semibold mb-4 text-[#fac176]">
-        A Relationship Built on Trust and Value
-      </h3>
+              <p className="text-white/85 leading-relaxed">
+                Entrepreneurship Cell NIT Bhopal has been organising large-scale events that attract huge audiences as well as committed sponsors and over the years has grown from a small community of innovators into the host of Central India’s largest entrepreneurial fest, now striving to elevate our initiatives toward national-level recognition and impact.
+                <br /><br />
+                Aligned with our vision to build a strong entrepreneurial environment among the youth, we work to create a mutually beneficial platform where both rising startups and established enterprises thrive. Through this collaboration, our sponsors gain access to an ever-expanding audience along with diverse networking opportunities that broaden their reach and influence.
+              </p>
+            </motion.div>
 
-      <p className="text-white/85 leading-relaxed">
-        We sincerely thank our partners for their trust and continued support. Their satisfaction with the partnership strengthens our dedication to fulfilling commitments with the same consistency and enthusiasm that define our work.
-        <br /><br />
-        As we look forward to future initiatives, we remain committed to delivering excellence for our participants and for the sponsors who support us and help build a vibrant entrepreneurial ecosystem at E-Cell NIT Bhopal.
-      </p>
-    </motion.div>
+            {/* Card 2 */}
+            <motion.div
+              className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8 text-white shadow-lg"
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-[#fac176]">
+                A Relationship Built on Trust and Value
+              </h3>
 
-  </div>
-</motion.div>
+              <p className="text-white/85 leading-relaxed">
+                We sincerely thank our partners for their trust and continued support. Their satisfaction with the partnership strengthens our dedication to fulfilling commitments with the same consistency and enthusiasm that define our work.
+                <br /><br />
+                As we look forward to future initiatives, we remain committed to delivering excellence for our participants and for the sponsors who support us and help build a vibrant entrepreneurial ecosystem at E-Cell NIT Bhopal.
+              </p>
+            </motion.div>
+
+          </div>
+        </motion.div>
 
 
         <motion.h2
@@ -564,34 +561,34 @@ const pastSponsors = [
           </motion.h2>
 
           <div className="relative h-[40vh] overflow-hidden mt-20">
-  <motion.div
-    animate={{ y: ["0%", "-50%"] }}
-    transition={{
-      duration: testimonials.length * 6,
-      ease: "linear",
-      repeat: Infinity,
-    }}
-    className="flex flex-col gap-6"
-  >
-    {[...testimonials, ...testimonials].map((item, index) => (
-      <div
-        key={index}
-        className="bg-black border border-[#FAC176]/40 p-6 rounded-xl flex flex-col items-center"
-      >
-        <FaQuoteLeft className="text-[#FAC176] text-3xl mb-3" />
-        <p className="text-white italic mb-4">
-          “{item.quote}”
-        </p>
-        <span className="text-[#FAC176] font-semibold">
-          — {item.author}
-        </span>
-        <span className="text-white/70 text-sm mt-1">
-          {item.designation}
-        </span>
-      </div>
-    ))}
-  </motion.div>
-</div>
+            <motion.div
+              animate={{ y: ["0%", "-50%"] }}
+              transition={{
+                duration: testimonials.length * 6,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              className="flex flex-col gap-6"
+            >
+              {[...testimonials, ...testimonials].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-black border border-[#FAC176]/40 p-6 rounded-xl flex flex-col items-center"
+                >
+                  <FaQuoteLeft className="text-[#FAC176] text-3xl mb-3" />
+                  <p className="text-white italic mb-4">
+                    “{item.quote}”
+                  </p>
+                  <span className="text-[#FAC176] font-semibold">
+                    — {item.author}
+                  </span>
+                  <span className="text-white/70 text-sm mt-1">
+                    {item.designation}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
 
         </div>
       </section>
@@ -679,8 +676,8 @@ const pastSponsors = [
               type="submit"
               disabled={loading}
               className={`${loading
-                  ? "bg-[#eab465] cursor-not-allowed"
-                  : "bg-[#FAC176] hover:bg-[#eab465]"
+                ? "bg-[#eab465] cursor-not-allowed"
+                : "bg-[#FAC176] hover:bg-[#eab465]"
                 } text-black font-semibold py-3 rounded-lg transition-all flex justify-center items-center gap-2`}
             >
               {loading ? (
@@ -733,33 +730,52 @@ const pastSponsors = [
           Our Sponsors
         </motion.h2>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
-        {sponsorsToShow.map((sponsor, idx) => (
-          <div key={idx} className="w-40 h-27 md:w-40 md:h-30 flex items-center justify-center p-4 bg-white rounded-lg">
-            <img
-              src={sponsor.logo}
-              alt="Sponsor logo"
-              className="max-w-full max-h-full object-contain"
-            />
-          </div>
-        ))}
+          {sponsorsToShow1.map((sponsor, idx) => (
+            <a
+              key={idx}
+              href={sponsor.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div
+                className="
+      w-40 h-27 md:w-40 md:h-30
+      flex items-center justify-center
+      p-4 bg-white rounded-lg
+      transform transition-all duration-300 ease-out
+      group-hover:scale-110
+      group-hover:-translate-y-1
+      group-hover:shadow-[0_10px_30px_rgba(250,193,118,0.35)]
+    "
+              >
+                <img
+                  src={sponsor.logo ?? sponsor.src}
+                  alt="Sponsor logo"
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </a>
 
-      </div>
+          ))}
 
-      {/* View More button only for mobile */}
-      {isMobile && !showAll && sponsors.length > mobileLimit && (
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setShowAll(true)}
-            className="px-6 py-2 rounded-md bg-[#FAC176] text-black font-semibold hover:bg-yellow-500 transition"
-          >
-            View More
-          </button>
         </div>
-      )}
+
+        {/* View More button only for mobile */}
+        {isMobile && !showAll1 && sponsors.length > mobileLimit && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll1(true)}
+              className="px-6 py-2 rounded-md bg-[#FAC176] text-black font-semibold hover:bg-yellow-500 transition"
+            >
+              View More
+            </button>
+          </div>
+        )}
 
       </section>
 
-      <section id='allSponsors' className="py-20 mt-20 bg-black md:px-16">
+      <section className="py-20 mt-20 bg-black md:px-16">
         <motion.h2
           className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#fac176] to-[#633902] text-transparent bg-clip-text mb-16 text-center"
           variants={fadeUp}
@@ -769,38 +785,57 @@ const pastSponsors = [
           Our Past Sponsors
         </motion.h2>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8 px-4 md:px-0">
-        {pastSponsors.map((sponsor, idx) => (
-          <div key={idx} className="w-40 h-27 md:w-40 md:h-30 flex items-center justify-center p-4 bg-white rounded-lg">
-            <img
-              src={sponsor.src}
-              alt="Sponsor logo"
-              className="max-w-full max-h-full object-contain"
-            />
-          </div>
-        ))}
+          {sponsorsToShow2.map((sponsor, idx) => (
+            <a
+              key={idx}
+              href={sponsor.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div
+                className="
+      w-40 h-27 md:w-40 md:h-30
+      flex items-center justify-center
+      p-4 bg-white rounded-lg
+      transform transition-all duration-300 ease-out
+      group-hover:scale-104
+      group-hover:-translate-y-1
+      group-hover:shadow-[0_10px_30px_rgba(250,193,118,0.35)]
+    "
+              >
+                <img
+                  src={sponsor.logo ?? sponsor.src}
+                  alt="Sponsor logo"
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </a>
 
-      </div>
+          ))}
 
-      {/* View More button only for mobile */}
-      {isMobile && !showAll && sponsors.length > mobileLimit && (
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setShowAll(true)}
-            className="px-6 py-2 rounded-md bg-[#FAC176] text-black font-semibold hover:bg-yellow-500 transition"
-          >
-            View More
-          </button>
         </div>
-      )}
+
+        {/* View More button only for mobile */}
+        {isMobile && !showAll2 && sponsors.length > mobileLimit && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll2(true)}
+              className="px-6 py-2 rounded-md bg-[#FAC176] text-black font-semibold hover:bg-yellow-500 transition"
+            >
+              View More
+            </button>
+          </div>
+        )}
 
       </section>
 
       <section className="py-20 mt-20 bg-black px-8 md:px-16">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto mb-10 mt-4">
-        {teamData.map((member, index) => (
-          <GildedMemberCard key={index} {...member} />
-        ))}
-      </div>
+          {teamData.map((member, index) => (
+            <GildedMemberCard key={index} {...member} />
+          ))}
+        </div>
       </section>
 
 
