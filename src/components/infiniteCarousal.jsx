@@ -48,7 +48,7 @@ export default function TeamCarousel() {
         },
         {
             name: "Zey Siegel",
-            title: "Co-founder of Starbucks",
+            title: "Co-founder, Starbucks",
             image: "/guests/zey-siegel.jpeg",
         },
         {
