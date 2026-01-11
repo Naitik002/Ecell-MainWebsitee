@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: "GALLERY", path: "/gallery" },
     { name: "TEAM", path: "/team" },
     { name: "SPONSOR US", path: "/sponsors" },
+    {name: "CA PROGRAM", path: "https://ca.ecellnitb.in/"},
     { name: "CONTACT", path: "/contact" },
   ];
 
@@ -136,8 +137,8 @@ const Navbar = () => {
                 <Link
                   href={item.path}
                   onClick={() => setMenuOpen(false)}
-                  className={`block relative transition-all duration-300 hover:text-[#FAC176] ${pathname === item.path
-                    ? "after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-full after:h-[2px] after:bg-[#FAC176]"
+                  className={`block relative transition-all duration-300 ${pathname === item.path
+                    ? "after:content-[''] after:absolute after:-bottom-[3px] text-[#FAC176] after:left-0 after:w-full after:h-[2px] after:bg-[#FAC176]"
                     : "after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-0 after:h-[2px] after:bg-[#FAC176] hover:after:w-full after:transition-all after:duration-300"
                     }`}
                 >

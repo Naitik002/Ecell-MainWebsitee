@@ -1,9 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
-import React from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useSpring,
+  AnimatePresence
+} from "framer-motion";
+import React, { useState } from "react";
 
 const HeroSection = () => {
+  const [showAlert, setShowAlert] = useState(true);
+  const { scrollY } = useScroll();
+
+  const rawX = useTransform(scrollY, [0, 800], [0, 420]);
+  const x = useSpring(rawX, {
+    stiffness: 90,
+    damping: 25,
+    mass: 0.6,
+  });
+
+  const opacity = useTransform(scrollY, [0, 600], [1, 0.5]);
   return (
     <section
       className="relative w-full h-screen overflow-x-hidden mt-0 md:mt-25"
@@ -17,6 +34,50 @@ const HeroSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <AnimatePresence>
+      {showAlert && (
+        <motion.div
+            style={{ x, opacity }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{
+              x: 600,          // 👉 animate to right on close
+              opacity: 0,
+              transition: { duration: 0.5, ease: "easeInOut" },
+            }}
+            className="fixed top-30 md:top-40 right-5 z-50"
+          >
+          <div className="flex items-start gap-3 bg-[#1a1a1a] border-l-4 border-[#fac176] text-white px-5 py-4 rounded-lg shadow-lg w-[350px] md:w-[300px]">
+            <div className="w-2 h-2 mt-2 rounded-full bg-[#fac176] animate-pulse" />
+
+            <div className="flex-1">
+              <h4 className="font-semibold text-sm text-[#fac176]">
+                Alert
+              </h4>
+              <p className="text-sm text-gray-300">
+                Campus Ambassador Program is live!
+              </p>
+              <button
+                onClick={() =>
+                  window.open("https://ca.ecellnitb.in/", "_blank")
+                }
+                className="w-20 bg-[#fac176] p-0.5 rounded-lg text-sm mt-2 text-black font-semibold hover:bg-[#e6b85c] transition"
+              >
+                Join Now
+              </button>
+            </div>
+
+            <button
+              onClick={() => setShowAlert(false)}
+              className="text-gray-400 hover:text-white transition"
+            >
+              ✕
+            </button>
+          </div>
+        </motion.div>
+      )}
+      </AnimatePresence>
+
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-80" />
 
@@ -51,7 +112,8 @@ const HeroSection = () => {
           </h1>
 
           <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-xs sm:max-w-sm md:max-w-md">
-            Empowering innovators to turn ideas into impact. Join the movement that transforms vision into reality.
+            Empowering innovators to turn ideas into impact. Join the movement
+            that transforms vision into reality.
           </p>
         </motion.div>
       </div>
@@ -60,4 +122,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

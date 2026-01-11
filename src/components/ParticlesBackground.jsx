@@ -11,8 +11,8 @@ export default function ParticlesBackground() {
 
       window.particlesJS("particles-js", {
         particles: {
-          number: { value: 80, density: { enable: true, value_area: 500 } },
-          color: { value: "#000000" },
+          number: { value: 80, density: { enable: true, value_area: 300 } },
+          color: { value: "#fac176" },
           opacity: { value: 0.4 },
           size: { value: 2 },
           move: { enable: true, speed: 0.8 },
@@ -32,7 +32,7 @@ export default function ParticlesBackground() {
   return (
     <div
       id="particles-js"
-      className="absolute inset-0 z-90 pointer-events-none"
+      className="absolute inset-0 z-2 pointer-events-none"
     />
   );
 }
