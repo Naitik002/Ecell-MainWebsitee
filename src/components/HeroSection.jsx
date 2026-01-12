@@ -47,7 +47,7 @@ const HeroSection = () => {
             }}
             className="fixed top-30 md:top-40 right-5 z-50"
           >
-          <div className="flex items-start gap-3 bg-[#1a1a1a] border-l-4 border-[#fac176] text-white px-5 py-4 rounded-lg shadow-lg w-[350px] md:w-[300px]">
+          {/* <div className="flex items-start gap-3 bg-[#1a1a1a] border-l-4 border-[#fac176] text-white px-5 py-4 rounded-lg shadow-lg w-[350px] md:w-[300px]">
             <div className="w-2 h-2 mt-2 rounded-full bg-[#fac176] animate-pulse" />
 
             <div className="flex-1">
@@ -73,7 +73,7 @@ const HeroSection = () => {
             >
               ✕
             </button>
-          </div>
+          </div> */}
         </motion.div>
       )}
       </AnimatePresence>

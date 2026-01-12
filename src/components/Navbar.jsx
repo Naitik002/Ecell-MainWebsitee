@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: "GALLERY", path: "/gallery" },
     { name: "TEAM", path: "/team" },
     { name: "SPONSOR US", path: "/sponsors" },
-    {name: "CA PROGRAM", path: "https://ca.ecellnitb.in/"},
+    // {name: "CA PROGRAM", path: "https://ca.ecellnitb.in/"},
     { name: "CONTACT", path: "/contact" },
   ];
 
