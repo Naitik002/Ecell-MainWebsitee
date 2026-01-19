@@ -570,7 +570,7 @@ export const data1 = [
     "mail": "#"
   },
   {
-    "imgLink": "./team_images/Sanskar Shrivastava (2).png",
+    "imgLink": "./team_images/Sanskar Shrivastava.jpeg",
     "personName": "Sanskar Shrivastava",
     "personVertical": "Web Development Lead",
     "linkedin": "https://www.linkedin.com/in/sanskar-shrivastava-813322206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
