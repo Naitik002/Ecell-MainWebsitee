@@ -752,10 +752,10 @@ const Contact = () => {
       mail: null
     },
     {
-      image: "/Images-team/Dr. Deepak Kumar.webp",
-      name: "Dr. Deepak Kumar",
+      image: "/Images-team/Dr. Vinod Yadav.jpg",
+      name: "Dr. Vinod Yadav",
       rolt: "Coordinator",
-      linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",
+      linkedin: "https://www.linkedin.com/in/vinod-yadav-85a01a21/",
       insta: null,
       mail: null
     },

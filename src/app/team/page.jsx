@@ -311,10 +311,10 @@ const TeamPage = () => {
       mail: null
     },
     {
-      imgLink: "/Images-team/Dr. Deepak Kumar.webp",
-      personName: "Dr. Deepak Kumar",
+      imgLink: "/Images-team/Dr. Vinod Yadav.jpg",
+      personName: "Dr. Vinod Yadav",
       personVertical: "Coordinator",
-      linkedin: "https://www.linkedin.com/in/dr-deepak-kumar-ab3787166/",
+      linkedin: "https://www.linkedin.com/in/vinod-yadav-85a01a21/",
       insta: null,
       mail: null
     },
